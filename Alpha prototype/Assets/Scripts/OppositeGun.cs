@@ -19,26 +19,28 @@ public class OppositeGun : MonoBehaviour
     private void Shoot()
     {
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit)) //hits an object
         {
+            //Renders line to point
             lineRender.SetPosition(0, rayOrigin.transform.position);
-            Vector3 targetPoint = cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
-            //lineRender.SetPosition(1, hit.transform.position);
-            lineRender.SetPosition(1, rayOrigin.transform.position + (cam.transform.forward * 100));
+            Vector3 targetPoint = cam.ViewportToWorldPoint(new Vector2(0.5f, 0.5f));
+            lineRender.SetPosition(1, hit.point);
+            Debug.Log(hit.point);
             
 
-            //Detection function call
+            //Calls Opposite effect function
             if(hit.transform.gameObject.GetComponent<Opposite>() != null)
             {
                 hit.transform.gameObject.GetComponent<Opposite>().CallOpposite();
             }
 
         }
-        else
+        else //nothing was hit
         {
             lineRender.SetPosition(0, rayOrigin.transform.position);
             lineRender.SetPosition(1, rayOrigin.transform.position + (cam.transform.forward * 100));
         }
+        //Starts a delay
         StartCoroutine(ShootLaser());
     }
 
