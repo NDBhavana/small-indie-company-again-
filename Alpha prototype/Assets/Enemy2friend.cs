@@ -7,11 +7,13 @@ public class Enemy2friend : MonoBehaviour
     public Vector3 startposn;
     public Vector3 endposn;
     public bool shot;
-    static int lives = 3;
+    public int lives = 3;
     public float step = 10;
     public float speed = 5;
     public float counter = 0;
     public float timerange = 12;
+    public Material friendmaterial;
+    public Material enemymaterial;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,19 +40,34 @@ public class Enemy2friend : MonoBehaviour
         {
             counter = 0;
         }
+        if (shot)
+        {
+            gameObject.tag = "Friend";
+            gameObject.GetComponent<Renderer>().material=friendmaterial;
+        }
+        if (!shot)
+        {
+            gameObject.tag = "Enemy";
+            gameObject.GetComponent<Renderer>().material=enemymaterial;
+        }
+        if(gameObject.tag)
+
     }
-    void onTriggerEnter(Collider other)
+    
+    void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("playerbody"))
         {
             lives -= 1;
+            Debug.Log("AAAAAAA");
         }
-        if (other.tag == "Friend")
+        if (other.CompareTag("Friend"))
         {
             Destroy(this);
         }
         
 
     }
+   
 }
 

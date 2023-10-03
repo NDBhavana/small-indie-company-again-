@@ -118,3 +118,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41895c7dfea1254e9f40d71e54595db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startposn: {x: 0, y: 0, z: 0}
+  endposn: {x: 0, y: 0, z: 0}
+  shot: 0
+  lives: 3
+  step: 10
+  speed: 5
+  counter: 0
+  timerange: 12
+  friendmaterial: {fileID: 2100000, guid: bb0d9dff834b23148a2f0c8598624622, type: 2}
+  enemymaterial: {fileID: 2100000, guid: 09593f923bf4b4e428fe1e2f9c654772, type: 2}
