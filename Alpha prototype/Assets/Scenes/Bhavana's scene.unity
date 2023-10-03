@@ -428,6 +428,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &789556282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9128023824790353539, guid: eb8939d68f378f74b8dbbb885e2a557b, type: 3}
+  m_PrefabInstance: {fileID: 867706809}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &789556283 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2236533931535892207, guid: eb8939d68f378f74b8dbbb885e2a557b, type: 3}
@@ -1051,6 +1056,10 @@ PrefabInstance:
       propertyPath: startposn.z
       value: -2.3
       objectReference: {fileID: 0}
+    - target: {fileID: 8368634993566025946, guid: eb8939d68f378f74b8dbbb885e2a557b, type: 3}
+      propertyPath: closest_enemy
+      value: 
+      objectReference: {fileID: 789556282}
     - target: {fileID: 9128023824790353539, guid: eb8939d68f378f74b8dbbb885e2a557b, type: 3}
       propertyPath: m_Name
       value: Cube
