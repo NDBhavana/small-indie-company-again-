@@ -20,6 +20,9 @@ public class Opposite : MonoBehaviour
 
                 break;
 
+            case "enemy2friend":
+                this.gameObject.GetComponent<Enemy2friend>().enemy2friendndback();
+                break;
 
             case "default":
                 break;

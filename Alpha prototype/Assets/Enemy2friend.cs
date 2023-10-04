@@ -82,6 +82,17 @@ public class Enemy2friend : MonoBehaviour
 
 
     }
+    public void enemy2friendndback()
+    {
+        if (this.shot)
+        {
+            this.shot = false;
+        }
+        else
+        {
+            this.shot = true;
+        }
+    }
    
 }
 

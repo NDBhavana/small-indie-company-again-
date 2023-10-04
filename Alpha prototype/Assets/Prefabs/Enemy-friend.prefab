@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2469863303090723453}
   - component: {fileID: 3150387006588921143}
   - component: {fileID: 8368634993566025946}
+  - component: {fileID: 4938306305792252906}
   m_Layer: 0
   m_Name: Enemy-friend
   m_TagString: Enemy
@@ -120,11 +121,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startposn: {x: 0, y: 0, z: 0}
   endposn: {x: 0, y: 0, z: 0}
-  shot: 0
   lives: 3
   step: 10
+  closest_enemy: {fileID: 0}
   speed: 5
   counter: 0
   timerange: 12
   friendmaterial: {fileID: 2100000, guid: bb0d9dff834b23148a2f0c8598624622, type: 2}
   enemymaterial: {fileID: 2100000, guid: 09593f923bf4b4e428fe1e2f9c654772, type: 2}
+  patrol: 1
+--- !u!114 &4938306305792252906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9128023824790353539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89333c8d305ee04c8a59150facb277a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oppositeType: enemy2friend

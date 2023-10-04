@@ -438,6 +438,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2236533931535892207, guid: eb8939d68f378f74b8dbbb885e2a557b, type: 3}
   m_PrefabInstance: {fileID: 867706809}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &789556284
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789556282}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &867706809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -498,6 +525,10 @@ PrefabInstance:
       propertyPath: startposn.y
       value: 0.495
       objectReference: {fileID: 0}
+    - target: {fileID: 8368634993566025946, guid: eb8939d68f378f74b8dbbb885e2a557b, type: 3}
+      propertyPath: closest_enemy
+      value: 
+      objectReference: {fileID: 1998983500}
     - target: {fileID: 9128023824790353539, guid: eb8939d68f378f74b8dbbb885e2a557b, type: 3}
       propertyPath: m_Name
       value: Cube2
@@ -505,7 +536,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9128023824790353539, guid: eb8939d68f378f74b8dbbb885e2a557b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 789556284}
   m_SourcePrefab: {fileID: 100100000, guid: eb8939d68f378f74b8dbbb885e2a557b, type: 3}
 --- !u!1 &1465078029
 GameObject:
