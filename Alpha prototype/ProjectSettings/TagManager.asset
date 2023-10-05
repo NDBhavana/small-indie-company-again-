@@ -7,6 +7,8 @@ TagManager:
   - CinemachineTarget
   - Death
   - Enemy
+  - Friend
+  - playerbody
   layers:
   - Default
   - TransparentFX
