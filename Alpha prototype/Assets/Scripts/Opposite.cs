@@ -11,9 +11,11 @@ public class Opposite : MonoBehaviour
         switch (oppositeType)
         {
             case "wall":
-                Debug.Log("Hit detected");
-                //transform.gameObject.GetComponent<WallScript>().CallFunction();
-                //replace WallScript and CallFunction
+                WallController wall = GetComponent<WallController>();
+                if (wall != null)
+                {
+                    wall.CallFunction(); // Call the function in WallController.
+                }
                 break;
 
             case "fireice":
