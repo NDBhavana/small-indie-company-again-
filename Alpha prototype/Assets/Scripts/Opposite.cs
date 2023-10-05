@@ -19,7 +19,7 @@ public class Opposite : MonoBehaviour
                 break;
 
             case "fireice":
-
+                this.gameObject.GetComponent<FireIceBehavior>().colorchange();
                 break;
 
             case "enemy2friend":
