@@ -37,7 +37,7 @@ public class WallController : MonoBehaviour
             // Enable the collider to block the player.
             if (wallCollider != null)
             {
-                wallCollider.enabled = true;
+                wallCollider.isTrigger = false;
             }
 
             isGreen = false; // Set the wall to red.
@@ -50,7 +50,7 @@ public class WallController : MonoBehaviour
             // Disable the collider to allow the player to pass through.
             if (wallCollider != null)
             {
-                wallCollider.enabled = false;
+                wallCollider.isTrigger = true;
             }
 
             isGreen = true; // Set the wall to green.
