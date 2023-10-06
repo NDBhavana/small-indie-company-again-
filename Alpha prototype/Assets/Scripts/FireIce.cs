@@ -13,12 +13,20 @@ public class FireIce : MonoBehaviour
         if(istrue)
         {
             this.gameObject.GetComponent<Renderer>().material = fire;
+            this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 10f, ForceMode.Impulse);
+
             istrue = false;
+             
+                        
+                        
+
+
         }
 
         else
         {
             this.gameObject.GetComponent<Renderer>().material = ice;
+            transform.Translate(Vector3.forward);
             istrue = true;
 
         }
