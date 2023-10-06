@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu/Start.unity
+    guid: 41dea7bd7b0ab3e45817478b8be732d1
+  - enabled: 1
+    path: Assets/Scenes/Anuradha's Scene.unity
+    guid: 106dd59527952cd4caf56488f5e43914
+  - enabled: 1
+    path: Assets/Scenes/Bhavana's scene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Nandila/nan 1.unity
+    guid: dbf5da01a8b15d440b7351c476427d79
+  - enabled: 1
+    path: Assets/Scenes/Kavin's Scene.unity
+    guid: 746e3367d8fd90d46bfc81ca7b7199e6
   m_configObjects: {}

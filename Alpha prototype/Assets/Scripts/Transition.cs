@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Transition : MonoBehaviour
 {
+    public int sceneindex;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class Transition : MonoBehaviour
     {
         if (other.CompareTag("playerbody"))
         {
-            Debug.Log("Done!");
+            SceneManager.LoadScene(sceneindex);
         }
     }
 }
