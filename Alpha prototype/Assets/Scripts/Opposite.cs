@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Opposite : MonoBehaviour
 {
     public string oppositeType = "default";
@@ -25,7 +25,10 @@ public class Opposite : MonoBehaviour
             case "enemy2friend":
                 this.gameObject.GetComponent<Enemy2friend>().enemy2friendndback();
                 break;
-
+            case "falldamage":
+                this.gameObject.GetComponent<TextMeshPro>().text="NO FALL DAMAGE";
+                GameObject.Find("Floor").GetComponent<FallDamageDetection>().ToggleFallDamage = !(GameObject.Find("Floor").GetComponent<FallDamageDetection>().ToggleFallDamage);
+                break;
             case "default":
                 break;
         }

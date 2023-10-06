@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class FallDamageDetection : MonoBehaviour
 {
-    bool ToggleFallDamage = true;
+    public bool ToggleFallDamage = true;
     private void OnTriggerEnter(Collider other) {
         if(ToggleFallDamage)
         {
-            if(other.gameObject.tag == "Death"){
+            if(other.gameObject.tag == "playerbody"){
             Debug.Log("My name is Malenia!");
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 SceneManager.LoadScene(5);
@@ -17,7 +17,7 @@ public class FallDamageDetection : MonoBehaviour
         }
         
     }
-
+/*
     private void OnTriggerStay(Collider other) {
         if(other.gameObject.tag == "Enemy"){
             Debug.Log("My name is Malenia!");
@@ -29,6 +29,6 @@ public class FallDamageDetection : MonoBehaviour
             Debug.Log("My name is Malenia!");
         }
     }
-    
+    */
 
 }
