@@ -26,8 +26,17 @@ public class Opposite : MonoBehaviour
                 this.gameObject.GetComponent<Enemy2friend>().enemy2friendndback();
                 break;
             case "falldamage":
-                this.gameObject.GetComponent<TextMeshPro>().text="NO FALL DAMAGE";
-                GameObject.Find("Floor").GetComponent<FallDamageDetection>().ToggleFallDamage = !(GameObject.Find("Floor").GetComponent<FallDamageDetection>().ToggleFallDamage);
+
+                if (GameObject.Find("Floor").GetComponent<FallDamageDetection>().ToggleFallDamage)
+                {
+                    this.gameObject.GetComponent<TextMeshPro>().text = "NO FALL DAMAGE";
+                    GameObject.Find("Floor").GetComponent<FallDamageDetection>().ToggleFallDamage = false;
+                }
+                else
+                {
+                    this.gameObject.GetComponent<TextMeshPro>().text = "FALL DAMAGE";
+                    GameObject.Find("Floor").GetComponent<FallDamageDetection>().ToggleFallDamage = true;
+                }
                 break;
             case "default":
                 break;
