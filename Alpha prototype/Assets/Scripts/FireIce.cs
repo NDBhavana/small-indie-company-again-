@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireIceBehavior : MonoBehaviour
+public class FireIce : MonoBehaviour
 {
     public Material fire;
     public Material ice;

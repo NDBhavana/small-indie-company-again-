@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 717025514}
   - component: {fileID: 717025513}
   - component: {fileID: 717025512}
-  - component: {fileID: 717025511}
+  - component: {fileID: 717025517}
   m_Layer: 0
   m_Name: Fire1
   m_TagString: Untagged
@@ -416,20 +416,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &717025511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717025510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b6c04752cd2f054ba951d2f65f552ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fire: {fileID: 2100000, guid: 0c75b7d7ea8df88429d47e917f136d19, type: 2}
-  ice: {fileID: 2100000, guid: b8e75e680949a2c40bbd4654733203fd, type: 2}
 --- !u!114 &717025512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +515,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &717025517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717025510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90572496d517382478f1b5ab8c94060a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 2100000, guid: 0c75b7d7ea8df88429d47e917f136d19, type: 2}
+  ice: {fileID: 2100000, guid: b8e75e680949a2c40bbd4654733203fd, type: 2}
 --- !u!1 &1465078029
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 1492484982}
   - component: {fileID: 1492484981}
   - component: {fileID: 1492484986}
-  - component: {fileID: 1492484985}
+  - component: {fileID: 1492484987}
   m_Layer: 0
   m_Name: Fire2
   m_TagString: Untagged
@@ -741,20 +741,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1492484985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492484980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b6c04752cd2f054ba951d2f65f552ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fire: {fileID: 2100000, guid: 0c75b7d7ea8df88429d47e917f136d19, type: 2}
-  ice: {fileID: 2100000, guid: b8e75e680949a2c40bbd4654733203fd, type: 2}
 --- !u!114 &1492484986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,6 +754,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oppositeType: fireice
+--- !u!114 &1492484987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492484980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90572496d517382478f1b5ab8c94060a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 2100000, guid: 0c75b7d7ea8df88429d47e917f136d19, type: 2}
+  ice: {fileID: 2100000, guid: b8e75e680949a2c40bbd4654733203fd, type: 2}
 --- !u!1 &1719523892
 GameObject:
   m_ObjectHideFlags: 0
