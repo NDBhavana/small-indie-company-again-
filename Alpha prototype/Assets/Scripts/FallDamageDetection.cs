@@ -11,7 +11,8 @@ public class FallDamageDetection : MonoBehaviour
         {
             if(other.gameObject.tag == "Death"){
             Debug.Log("My name is Malenia!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene(5);
             }
         }
         
