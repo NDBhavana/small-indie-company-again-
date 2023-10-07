@@ -15,13 +15,15 @@ public class Enemy2friend : MonoBehaviour
     public float timerange = 12;
     public Material friendmaterial;
     public Material enemymaterial;
+    public Material enemyplusfriend;
     public bool patrol = true;
+    public bool disabled=false;
     // Start is called before the first frame update
     void Start()
     {
         counter = 0;
-        
-        
+
+        startposn = transform.position;
     }
 
     // Update is called once per frame
@@ -45,21 +47,31 @@ public class Enemy2friend : MonoBehaviour
                 counter = 0;
             }
         }
-        if (shot)
+        if (shot && !disabled)
         {
             gameObject.tag = "Friend";
             gameObject.GetComponent<Renderer>().material=friendmaterial;
             patrol = false;
         }
-        if (!shot)
+        if (!shot && !disabled)
         {
             gameObject.tag = "Enemy";
             gameObject.GetComponent<Renderer>().material=enemymaterial;
             patrol = true;
         }
+        if (disabled)
+        {
+            patrol = false;
+        }
         if (gameObject.tag =="Friend")
         {
             transform.position = Vector3.MoveTowards(transform.position, closest_enemy.transform.position, step);
+        }
+        if (gameObject.tag == "enemy+friend")
+        {
+            patrol = false;
+            disabled = true;
+            gameObject.GetComponent<Renderer>().material = enemyplusfriend;
         }
 
     }
@@ -73,14 +85,27 @@ public class Enemy2friend : MonoBehaviour
         }
         if (other.CompareTag("Friend"))
         {
-            Destroy(this);
+            patrol = false;
+            disabled = true;
+           
+      
+            
         }
-        if (other.CompareTag("Enemy"))
+    
+
+    }
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Friend") && other.transform.position==this.transform.position)
         {
-            Destroy(this);
+            patrol = false;
+            disabled = true;
+            other.gameObject.GetComponent<Enemy2friend>().disabled = true;
+            other.gameObject.tag = "enemy+friend";
+            this.gameObject.tag = "enemy+friend";
+
+
         }
-
-
     }
     public void enemy2friendndback()
     {

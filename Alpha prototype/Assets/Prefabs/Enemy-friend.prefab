@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startposn: {x: 0, y: 0, z: 0}
   endposn: {x: 0, y: 0, z: 0}
+  shot: 0
   lives: 3
   step: 10
   closest_enemy: {fileID: 0}
@@ -129,7 +130,9 @@ MonoBehaviour:
   timerange: 12
   friendmaterial: {fileID: 2100000, guid: bb0d9dff834b23148a2f0c8598624622, type: 2}
   enemymaterial: {fileID: 2100000, guid: 09593f923bf4b4e428fe1e2f9c654772, type: 2}
+  enemyplusfriend: {fileID: 2100000, guid: ee731fcd79a15624a8c4c5ea8021f809, type: 2}
   patrol: 1
+  disabled: 0
 --- !u!114 &4938306305792252906
 MonoBehaviour:
   m_ObjectHideFlags: 0
