@@ -14,13 +14,18 @@ namespace StarterAssets
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
+		public float MoveSpeedice = 10.0f;
+		public float mspeed = 4.0f;
+		public float t;//lerp timer
 		[Tooltip("Sprint speed of the character in m/s")]
 		public float SprintSpeed = 6.0f;
 		[Tooltip("Rotation speed of the character")]
 		public float RotationSpeed = 1.0f;
 		[Tooltip("Acceleration and deceleration")]
 		public float SpeedChangeRate = 10.0f;
-
+		public float SpeedChangeRateice = 2.0f;
+		public float speedchanger = 4.0f;
+		public float stopspeed;
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
@@ -71,7 +76,8 @@ namespace StarterAssets
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
 		private GameObject _mainCamera;
-
+		public GameObject[] gameObjectl;
+		public bool nofireice = true;
 		private const float _threshold = 0.01f;
 
 		private bool IsCurrentDeviceMouse
@@ -108,13 +114,47 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+
 		}
 
 		private void Update()
-		{
+		{//fire and ice mod
+			gameObjectl = GameObject.FindGameObjectsWithTag("fire");
+
+			if (gameObjectl.Length == 0)
+			{
+				gameObjectl = GameObject.FindGameObjectsWithTag("ice");
+			}
+			nofireice = false;
+			if (gameObjectl.Length == 0)
+			{
+
+				nofireice = true;
+			}
+			if (!nofireice && this.gameObjectl[0].GetComponent<FireIce>().inice)//change speed and speed change rate to simulate sliding on ice
+			{
+				MoveSpeed = MoveSpeedice;
+				SpeedChangeRate = SpeedChangeRateice;
+				stopspeed= Mathf.Lerp(MoveSpeed, 0.0f, t);
+				t += 0.5f * Time.deltaTime;
+                if (t > 1.0f)
+                {
+					t = 0.0f;
+                }
+				Debug.Log("inice mvmt");
+			}
+			else if (nofireice || !this.gameObjectl[0].GetComponent<FireIce>().inice)//reset to original values if no ice
+			{
+				MoveSpeed = mspeed;
+				SpeedChangeRate = speedchanger;
+				stopspeed=0.0f;
+				Debug.Log("outofice");
+			}
+			
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			
 		}
 
 		private void LateUpdate()
@@ -154,14 +194,15 @@ namespace StarterAssets
 		private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
+
+			
 			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
 			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
 			// note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-			// if there is no input, set the target speed to 0
-			if (_input.move == Vector2.zero) targetSpeed = 0.0f;
-
+			// if there is no input, set the target speed to 0 unless there is ice, then lerp to zero
+			if (_input.move == Vector2.zero) targetSpeed = stopspeed;
 			// a reference to the players current horizontal velocity
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 
@@ -211,8 +252,9 @@ namespace StarterAssets
 					_verticalVelocity = -2f;
 				}
 
+				
 				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+				if (_input.jump && _jumpTimeoutDelta <= 0.0f||	!nofireice && this.gameObjectl[0].GetComponent<FireIce>().infire && _jumpTimeoutDelta <= 0.0f)//jump when fire
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
