@@ -29,6 +29,8 @@ namespace StarterAssets
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
+		public float jh;//variable to reset original jumpheight when no fire
+		public float jhfactor = 5;//multiply jumpheight by this when in fire
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
 		public float Gravity = -15.0f;
 
@@ -110,7 +112,7 @@ namespace StarterAssets
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
-
+			jh = JumpHeight;
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
@@ -131,6 +133,15 @@ namespace StarterAssets
 
 				nofireice = true;
 			}
+			if (!nofireice && this.gameObjectl[0].GetComponent<FireIce>().infire)
+            {
+				JumpHeight = jh * jhfactor;
+            }
+			else if (nofireice || !this.gameObjectl[0].GetComponent<FireIce>().infire)//reset to original values if no ice
+			{
+				JumpHeight = jh;
+			}
+
 			if (!nofireice && this.gameObjectl[0].GetComponent<FireIce>().inice)//change speed and speed change rate to simulate sliding on ice
 			{
 				MoveSpeed = MoveSpeedice;
