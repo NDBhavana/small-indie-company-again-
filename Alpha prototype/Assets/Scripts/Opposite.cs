@@ -38,6 +38,9 @@ public class Opposite : MonoBehaviour
                     GameObject.Find("Floor").GetComponent<FallDamageDetection>().ToggleFallDamage = true;
                 }
                 break;
+            case "predator2prey":
+                this.gameObject.GetComponent<Predator2prey>().predator2prey();
+                break;
             case "default":
                 break;
         }

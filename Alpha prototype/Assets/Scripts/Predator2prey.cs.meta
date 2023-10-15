@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5d29cf0d8cef5fc45a1994cabe0f755a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gameObject: {instanceID: 0}
+  - predatormaterial: {fileID: 2100000, guid: d3a236560acd94045adefbd61e2194b2, type: 2}
+  - preymaterial: {fileID: 2100000, guid: c684556aaa6635c4caed7cfbd9b1ef96, type: 2}
+  - player: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
