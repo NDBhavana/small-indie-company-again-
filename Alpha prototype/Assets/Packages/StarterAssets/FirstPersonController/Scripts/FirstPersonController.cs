@@ -152,14 +152,14 @@ namespace StarterAssets
                 {
 					t = 0.0f;
                 }
-				Debug.Log("inice mvmt");
+				
 			}
 			else if (nofireice || !this.gameObjectl[0].GetComponent<FireIce>().inice)//reset to original values if no ice
 			{
 				MoveSpeed = mspeed;
 				SpeedChangeRate = speedchanger;
 				stopspeed=0.0f;
-				Debug.Log("outofice");
+				
 			}
 			
 			JumpAndGravity();
