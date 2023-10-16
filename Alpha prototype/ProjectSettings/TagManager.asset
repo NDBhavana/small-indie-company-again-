@@ -16,6 +16,7 @@ TagManager:
   - cold
   - Predator
   - Prey
+  - Moving Box
   layers:
   - Default
   - TransparentFX
