@@ -6,7 +6,7 @@ public class FireIce : MonoBehaviour
 {
     public Material fire;
     public Material ice;
-    private bool istrue = false;
+    public bool istrue = false;
    
     public bool inice = false;
     public bool infire = false;

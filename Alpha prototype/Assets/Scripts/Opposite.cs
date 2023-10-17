@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -40,6 +40,9 @@ public class Opposite : MonoBehaviour
                 break;
             case "predator2prey":
                 this.gameObject.GetComponent<Predator2prey>().predator2prey();
+                break;
+            case "daynight":
+                this.gameObject.GetComponent<DayNightCycle>().ChangeTime();
                 break;
             case "default":
                 break;
