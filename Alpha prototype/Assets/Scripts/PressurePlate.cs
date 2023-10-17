@@ -5,7 +5,7 @@ public class PressurePlate : MonoBehaviour
     public string targetTag = "Moving Box"; 
     private Vector3 pressedPosition; // The position when the plate is pressed
     private Vector3 originalPosition; // The original position of the plate
-    private bool isPressed = false; // Boolean to track the state of the pressure plate
+    public bool isPressed = false; // Boolean to track the state of the pressure plate
 
     private void Start()
     {
@@ -31,7 +31,7 @@ public class PressurePlate : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
         Debug.Log("work");
-        if (other.tag == "Moving Box")
+        if (other.tag == "Predator"|| other.tag == "Prey"||other.tag=="Player")
         {
             Debug.Log("hi");
             isPressed = true; // Set the pressure plate as pressed
@@ -40,7 +40,7 @@ public class PressurePlate : MonoBehaviour
 
      void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Moving Box")
+        if (other.tag == "Predator" || other.tag == "Prey" || other.tag == "Player")
         {
             isPressed = false; // Set the pressure plate as not pressed
         }
