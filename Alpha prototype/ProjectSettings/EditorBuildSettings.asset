@@ -9,18 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/Start.unity
     guid: 41dea7bd7b0ab3e45817478b8be732d1
   - enabled: 1
-    path: Assets/Scenes/Anuradha's Scene.unity
-    guid: 106dd59527952cd4caf56488f5e43914
+    path: Assets/Scenes/Alpha/alpha_1.unity
+    guid: a0694af1149b1d84abc1493e3b757e42
   - enabled: 1
+    path: Assets/Scenes/Alpha/alpha_2.unity
+    guid: d9a38eda0c26cad448cf436fd3fdb684
+  - enabled: 0
+    path: Assets/Scenes/Anuradha/Anuradha's Scene.unity
+    guid: 106dd59527952cd4caf56488f5e43914
+  - enabled: 0
     path: Assets/Scenes/Bhavana/Enemy2friend and fire2ice.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nandila/FireandIce_Level.unity
     guid: dbf5da01a8b15d440b7351c476427d79
-  - enabled: 1
-    path: Assets/Scenes/Kavin's Scene.unity
+  - enabled: 0
+    path: Assets/Scenes/Kavin/Kavin's Scene.unity
     guid: 746e3367d8fd90d46bfc81ca7b7199e6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu/Try again.unity
     guid: 9e009e679d5f46644babde8d0b033f34
   - enabled: 1

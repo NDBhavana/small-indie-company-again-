@@ -6,6 +6,7 @@ public class GunPickup : MonoBehaviour
 {
     public GameObject gun;   
     public GameObject oppwall;   
+    public GameObject passage;   
     void Update()
     {
         transform.RotateAround(transform.position, transform.up, Time.deltaTime * 90f);
@@ -24,6 +25,7 @@ public class GunPickup : MonoBehaviour
         //enable
         gun.SetActive(true);
         oppwall.SetActive(true);
+        passage.SetActive(true);
     }
 
 }
