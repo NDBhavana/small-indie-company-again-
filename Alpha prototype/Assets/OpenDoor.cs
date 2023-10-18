@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Transition : MonoBehaviour
+public class OpenDoor : MonoBehaviour
 {
-    public int sceneindex;
-
+    public GameObject door;
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("playerbody"))
         {
-            SceneManager.LoadScene(sceneindex);
+            door.GetComponent<DoorOpening>().CallOpen();
         }
     }
 }
