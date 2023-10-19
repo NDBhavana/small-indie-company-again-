@@ -13,6 +13,7 @@ public class DayNightCycle : MonoBehaviour
     public GameObject bliss;
     public Material blissDay, blissNight;
     private GameObject directionalLight;
+    public GameObject door;
     Quaternion angleDay, angleNight;
 
     private void Start()
@@ -33,6 +34,7 @@ public class DayNightCycle : MonoBehaviour
             directionalLight.transform.rotation = angleNight;
             clock.gameObject.GetComponent<Renderer>().material = materialMidnight;
             bliss.gameObject.GetComponent<Renderer>().material = blissNight;
+            door.GetComponent<DoorOpening>().CallOpen();
         }
         else
         {
@@ -41,6 +43,7 @@ public class DayNightCycle : MonoBehaviour
             directionalLight.transform.rotation = angleDay;
             clock.gameObject.GetComponent<Renderer>().material = materialNoon;
             bliss.gameObject.GetComponent<Renderer>().material = blissDay;
+            door.GetComponent<DoorOpening>().CallClose();
         }
     }
 }
