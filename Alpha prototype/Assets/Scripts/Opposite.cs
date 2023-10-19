@@ -29,12 +29,12 @@ public class Opposite : MonoBehaviour
 
                 if (GameObject.Find("Floor").GetComponent<FallDamageDetection>().ToggleFallDamage)
                 {
-                    this.gameObject.GetComponent<TextMeshPro>().text = "NO FALL DAMAGE";
+                    this.gameObject.GetComponent<TextMeshPro>().text = "There is No Fall Damage!";
                     GameObject.Find("Floor").GetComponent<FallDamageDetection>().ToggleFallDamage = false;
                 }
                 else
                 {
-                    this.gameObject.GetComponent<TextMeshPro>().text = "FALL DAMAGE";
+                    this.gameObject.GetComponent<TextMeshPro>().text = "There is Fall Damage!";
                     GameObject.Find("Floor").GetComponent<FallDamageDetection>().ToggleFallDamage = true;
                 }
                 break;
