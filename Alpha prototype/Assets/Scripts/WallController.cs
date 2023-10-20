@@ -46,7 +46,7 @@ public class WallController : MonoBehaviour
         {
             // Change the wall's material to the green material.
             wallRenderer.material = startMaterial;
-            txt.text = "START";
+            txt.text = "GO";
             // Disable the collider to allow the player to pass through.
             if (wallCollider != null)
             {

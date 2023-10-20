@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 136216202}
   - component: {fileID: 136216201}
   - component: {fileID: 136216206}
-  - component: {fileID: 136216207}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -223,12 +222,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136216200}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.83, z: -19.75}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.626898, y: 2.6628084, z: 1.1702595}
   m_LocalScale: {x: 5, y: 4, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1792324769}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &136216206
 MonoBehaviour:
@@ -243,28 +242,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oppositeType: daynight
---- !u!114 &136216207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136216200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07edc4e5c65b3de459b4f32fad1f057c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isClock: 1
-  materialDay: {fileID: 2100000, guid: d9dca9ae1786c394f9e79c637aa9a7bf, type: 2}
-  materialNight: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
-  clock: {fileID: 0}
-  materialMidnight: {fileID: 2100000, guid: f5352bdc08fa44c4e9542589f5dbf724, type: 2}
-  materialNoon: {fileID: 2100000, guid: c3dd4f73c7db4f34282d270fe3942e54, type: 2}
-  bliss: {fileID: 389987948}
-  blissDay: {fileID: 2100000, guid: ae7e257a595ff434ca30b628e085e92c, type: 2}
-  blissNight: {fileID: 2100000, guid: 99d115e8409b1d143bff61e1c55d52e9, type: 2}
-  door: {fileID: 802772591}
 --- !u!1001 &231378854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -376,7 +353,6 @@ GameObject:
   - component: {fileID: 389987951}
   - component: {fileID: 389987950}
   - component: {fileID: 389987949}
-  - component: {fileID: 389987954}
   - component: {fileID: 389987953}
   m_Layer: 0
   m_Name: Bliss
@@ -464,12 +440,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389987948}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.75, y: 3, z: -14}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.17, y: 1.5, z: 7}
   m_LocalScale: {x: 0.1, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1792324769}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &389987953
 MonoBehaviour:
@@ -484,28 +460,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oppositeType: daynight
---- !u!114 &389987954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389987948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07edc4e5c65b3de459b4f32fad1f057c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isClock: 0
-  materialDay: {fileID: 2100000, guid: d9dca9ae1786c394f9e79c637aa9a7bf, type: 2}
-  materialNight: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
-  clock: {fileID: 0}
-  materialMidnight: {fileID: 2100000, guid: f5352bdc08fa44c4e9542589f5dbf724, type: 2}
-  materialNoon: {fileID: 2100000, guid: c3dd4f73c7db4f34282d270fe3942e54, type: 2}
-  bliss: {fileID: 389987948}
-  blissDay: {fileID: 2100000, guid: ae7e257a595ff434ca30b628e085e92c, type: 2}
-  blissNight: {fileID: 2100000, guid: 99d115e8409b1d143bff61e1c55d52e9, type: 2}
-  door: {fileID: 802772591}
 --- !u!1 &488811935
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,7 +682,6 @@ GameObject:
   - component: {fileID: 1566253718}
   - component: {fileID: 1566253717}
   - component: {fileID: 1566253716}
-  - component: {fileID: 1566253715}
   m_Layer: 0
   m_Name: SkyBox
   m_TagString: Untagged
@@ -736,28 +689,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1566253715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566253714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07edc4e5c65b3de459b4f32fad1f057c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isClock: 0
-  materialDay: {fileID: 2100000, guid: d9dca9ae1786c394f9e79c637aa9a7bf, type: 2}
-  materialNight: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
-  clock: {fileID: 0}
-  materialMidnight: {fileID: 2100000, guid: f5352bdc08fa44c4e9542589f5dbf724, type: 2}
-  materialNoon: {fileID: 2100000, guid: c3dd4f73c7db4f34282d270fe3942e54, type: 2}
-  bliss: {fileID: 389987948}
-  blissDay: {fileID: 2100000, guid: ae7e257a595ff434ca30b628e085e92c, type: 2}
-  blissNight: {fileID: 2100000, guid: 99d115e8409b1d143bff61e1c55d52e9, type: 2}
-  door: {fileID: 802772591}
 --- !u!114 &1566253716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,10 +782,67 @@ Transform:
   m_GameObject: {fileID: 1566253714}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: -5}
+  m_LocalPosition: {x: -8.626898, y: 8.8328085, z: 15.96026}
   m_LocalScale: {x: 20, y: 1, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 1792324769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1792324767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1792324769}
+  - component: {fileID: 1792324768}
+  m_Layer: 0
+  m_Name: DayNightController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1792324768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792324767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07edc4e5c65b3de459b4f32fad1f057c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClock: 1
+  materialDay: {fileID: 2100000, guid: d9dca9ae1786c394f9e79c637aa9a7bf, type: 2}
+  materialNight: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
+  clock: {fileID: 136216200}
+  materialMidnight: {fileID: 2100000, guid: f5352bdc08fa44c4e9542589f5dbf724, type: 2}
+  materialNoon: {fileID: 2100000, guid: c3dd4f73c7db4f34282d270fe3942e54, type: 2}
+  bliss: {fileID: 389987948}
+  blissDay: {fileID: 2100000, guid: ae7e257a595ff434ca30b628e085e92c, type: 2}
+  blissNight: {fileID: 2100000, guid: 99d115e8409b1d143bff61e1c55d52e9, type: 2}
+  door: {fileID: 802772591}
+--- !u!4 &1792324769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792324767}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.626898, y: 1.1671915, z: -20.96026}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 389987952}
+  - {fileID: 136216204}
+  - {fileID: 1566253720}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1836683944
@@ -1088,6 +1076,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 6.25
       objectReference: {fileID: 0}
+    - target: {fileID: 2497181595909287780, guid: 48a143c8c8422634d834c161b7bc7c83, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5346988471295982917, guid: 48a143c8c8422634d834c161b7bc7c83, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1144,12 +1136,19 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -6.25
       objectReference: {fileID: 0}
+    - target: {fileID: 8812674912048174008, guid: 48a143c8c8422634d834c161b7bc7c83, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5448185055508652558, guid: 48a143c8c8422634d834c161b7bc7c83, type: 3}
+    - {fileID: 7471142030322308899, guid: 48a143c8c8422634d834c161b7bc7c83, type: 3}
+    - {fileID: 6339058909231634642, guid: 48a143c8c8422634d834c161b7bc7c83, type: 3}
+    - {fileID: 1829214551509904298, guid: 48a143c8c8422634d834c161b7bc7c83, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5346988471295982917, guid: 48a143c8c8422634d834c161b7bc7c83, type: 3}
-      insertIndex: 6
+      insertIndex: 3
       addedObject: {fileID: 488811936}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48a143c8c8422634d834c161b7bc7c83, type: 3}
@@ -1159,10 +1158,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 705507995}
   - {fileID: 1836683944}
-  - {fileID: 1566253720}
   - {fileID: 231378854}
   - {fileID: 8152372668658678501}
-  - {fileID: 136216204}
-  - {fileID: 389987952}
   - {fileID: 7324183232139707848}
   - {fileID: 4127493275482499079}
+  - {fileID: 1792324769}

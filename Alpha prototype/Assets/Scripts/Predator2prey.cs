@@ -39,7 +39,6 @@ public class Predator2prey : MonoBehaviour
             //need to add code that prevents cube from moving out of fixed path
 
             transform.position = Vector3.MoveTowards(transform.position, newposn,step);
-            Debug.Log("AAAAA");
 
         }
         if (!predator)
