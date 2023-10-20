@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 399564693963526229}
   - component: {fileID: 409583976602517476}
   m_Layer: 0
-  m_Name: Fireandice
+  m_Name: Fire
   m_TagString: fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

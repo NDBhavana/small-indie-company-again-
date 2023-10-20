@@ -12,16 +12,16 @@ public class FireIce : MonoBehaviour
     public bool infire = false;
     public void colorchange()
     {
-        if(istrue)
+        if (istrue)
         {
             this.gameObject.GetComponent<Renderer>().material = fire;
             this.gameObject.tag = "fire";
             //this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 10f, ForceMode.Impulse);
 
             istrue = false;
-             
-                        
-                        
+
+
+
 
 
         }
@@ -35,19 +35,9 @@ public class FireIce : MonoBehaviour
 
         }
     }
-    void Update()
-    {
-       
-        
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("playerbody"))
-        {
-            Debug.Log("OW");
-            
-        }
-    }
+
+
+
     void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("playerbody"))
