@@ -19,6 +19,8 @@ namespace StarterAssets
 		public float t;//lerp timer
 		[Tooltip("Sprint speed of the character in m/s")]
 		public float SprintSpeed = 6.0f;
+		public float SprintSpeedice = 14.0f;
+		public float spspeed = 6.0f;
 		[Tooltip("Rotation speed of the character")]
 		public float RotationSpeed = 1.0f;
 		[Tooltip("Acceleration and deceleration")]
@@ -146,6 +148,7 @@ namespace StarterAssets
 			{
 				MoveSpeed = MoveSpeedice;
 				SpeedChangeRate = SpeedChangeRateice;
+				SprintSpeed = SprintSpeedice;
 				stopspeed= Mathf.Lerp(MoveSpeed, 0.0f, t);
 				t += 0.5f * Time.deltaTime;
                 if (t > 1.0f)
@@ -157,6 +160,7 @@ namespace StarterAssets
 			else if (nofireice || !this.gameObjectl[0].GetComponent<FireIce>().inice)//reset to original values if no ice
 			{
 				MoveSpeed = mspeed;
+				SprintSpeed = spspeed;
 				SpeedChangeRate = speedchanger;
 				stopspeed=0.0f;
 				
