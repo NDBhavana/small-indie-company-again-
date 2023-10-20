@@ -2865,7 +2865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5258562471216227767, guid: 3a2cf28b86eecfb44b3b8a5a58be3dff, type: 3}
       propertyPath: sceneindex
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5258562471216227767, guid: 3a2cf28b86eecfb44b3b8a5a58be3dff, type: 3}
       propertyPath: gameAnalytics
