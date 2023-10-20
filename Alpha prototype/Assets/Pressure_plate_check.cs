@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pressure_plate_check : MonoBehaviour
 {
     public GameObject[] pressure_plates;
+    public GameObject door;
     public int plate_no;
     public int presscount;
     public bool opendoor=false;
@@ -30,9 +31,14 @@ public class Pressure_plate_check : MonoBehaviour
         if (presscount == plate_no)
         {
             opendoor = true;
+            door.GetComponent<DoorOpening>().CallOpen();
         }
         
-        else { opendoor = false; }
+        else 
+        { 
+            opendoor = false;
+            door.GetComponent<DoorOpening>().CallClose();
+        }
 
         presscount = 0;
 

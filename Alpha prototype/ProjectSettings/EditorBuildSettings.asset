@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Alpha/alpha_2.unity
     guid: d9a38eda0c26cad448cf436fd3fdb684
+  - enabled: 1
+    path: Assets/Scenes/Alpha/alpha_3.unity
+    guid: dab7b73fc41cb0a4cbd7e959a1997731
+  - enabled: 1
+    path: Assets/Scenes/Alpha/alpha_4.unity
+    guid: f2353078adc42674c9a66a37ac1c5e95
   - enabled: 0
     path: Assets/Scenes/Anuradha/Anuradha's Scene.unity
     guid: 106dd59527952cd4caf56488f5e43914
