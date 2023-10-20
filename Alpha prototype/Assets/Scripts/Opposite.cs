@@ -42,7 +42,8 @@ public class Opposite : MonoBehaviour
                 this.gameObject.GetComponent<Predator2prey>().predator2prey();
                 break;
             case "daynight":
-                this.gameObject.GetComponent<DayNightCycle>().ChangeTime();
+                //this.gameObject.GetComponent<DayNightCycle>().ChangeTime();
+                this.gameObject.GetComponentInParent<DayNightCycle>().ChangeTime();
                 break;
             case "default":
                 break;

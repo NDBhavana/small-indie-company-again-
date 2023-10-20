@@ -18,8 +18,9 @@ public class restart_fall : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "playerbody")
+        if (other.tag == "playerbody" || other.tag == "Player")
         {
+            Debug.Log("find god");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
