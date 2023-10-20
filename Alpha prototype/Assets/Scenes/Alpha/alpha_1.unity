@@ -499,6 +499,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 930955075399351876, guid: d78b01dc49b50c84f932206cb6391dde, type: 3}
+      propertyPath: cursorLocked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3478245221166260799, guid: d78b01dc49b50c84f932206cb6391dde, type: 3}
       propertyPath: MoveSpeed
       value: 6
