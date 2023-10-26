@@ -393,6 +393,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4264190244219752905, guid: a77882c4cc24054479666ca2bc54b2af, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 21cda79974890de42904fc92e02e3f35, type: 2}
     - target: {fileID: 4546699661832007875, guid: a77882c4cc24054479666ca2bc54b2af, type: 3}
       propertyPath: m_Name
       value: Opposite Gun
