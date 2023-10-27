@@ -12,6 +12,10 @@ namespace StarterAssets
 	public class FirstPersonController : MonoBehaviour
 	{
 		[Header("Player")]
+		public FireIceManager fireicemgr;
+		public bool nofireice = true;
+		public bool infire = false;
+		public bool inice = false;
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
 		public float MoveSpeedice = 10.0f;
@@ -81,7 +85,7 @@ namespace StarterAssets
 		private StarterAssetsInputs _input;
 		private GameObject _mainCamera;
 		public GameObject[] gameObjectl;
-		public bool nofireice = true;
+		
 		private const float _threshold = 0.01f;
 
 		private bool IsCurrentDeviceMouse
@@ -119,54 +123,68 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+			try
+			{
+				fireicemgr = GameObject.Find("FireIceManager").GetComponent<FireIceManager>();
+			}
+			catch {
+				fireicemgr = null;
+			}
+            if (fireicemgr != null)
+            {
+				nofireice = false;
+            }
+            else
+            {
+				nofireice = true;
+            }
 
 		}
 
 		private void Update()
 		{//fire and ice mod
-			gameObjectl = GameObject.FindGameObjectsWithTag("fire");
-
-			if (gameObjectl.Length == 0)
-			{
-				gameObjectl = GameObject.FindGameObjectsWithTag("ice");
-			}
-			nofireice = false;
-			if (gameObjectl.Length == 0)
-			{
-
-				nofireice = true;
-			}
-			if (!nofireice && this.gameObjectl[0].GetComponent<FireIce>().infire)
+            if (!nofireice)
             {
-				JumpHeight = jh * jhfactor;
-            }
-			else if (nofireice || !this.gameObjectl[0].GetComponent<FireIce>().infire)//reset to original values if no ice
+				if (fireicemgr.inFire)
+				{
+					JumpHeight = jh * jhfactor;
+				}
+				if (fireicemgr.inIce)
+				{
+					JumpHeight = jh * jhfactor;
+					MoveSpeed = MoveSpeedice;
+					SpeedChangeRate = SpeedChangeRateice;
+					SprintSpeed = SprintSpeedice;
+					stopspeed = Mathf.Lerp(MoveSpeed, 0.0f, t);
+					t += 0.5f * Time.deltaTime;
+					if (t > 1.0f)
+					{
+						t = 0.0f;
+					}
+				}
+			}
+			
+			if (nofireice)//reset to original values if no fire or ice
 			{
 				JumpHeight = jh;
-			}
-
-			if (!nofireice && this.gameObjectl[0].GetComponent<FireIce>().inice)//change speed and speed change rate to simulate sliding on ice
-			{
-				MoveSpeed = MoveSpeedice;
-				SpeedChangeRate = SpeedChangeRateice;
-				SprintSpeed = SprintSpeedice;
-				stopspeed= Mathf.Lerp(MoveSpeed, 0.0f, t);
-				t += 0.5f * Time.deltaTime;
-                if (t > 1.0f)
-                {
-					t = 0.0f;
-                }
-				
-			}
-			else if (nofireice || !this.gameObjectl[0].GetComponent<FireIce>().inice)//reset to original values if no ice
-			{
 				MoveSpeed = mspeed;
 				SprintSpeed = spspeed;
 				SpeedChangeRate = speedchanger;
-				stopspeed=0.0f;
-				
+				stopspeed = 0.0f;
 			}
+
 			
+			if (!fireicemgr.inFire && !fireicemgr.inIce)//reset to original values if out of fire
+			{
+				JumpHeight = jh;
+				MoveSpeed = mspeed;
+				SprintSpeed = spspeed;
+				SpeedChangeRate = speedchanger;
+				stopspeed = 0.0f;
+
+			}
+
+
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
@@ -270,7 +288,7 @@ namespace StarterAssets
 
 				
 				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f||	!nofireice && this.gameObjectl[0].GetComponent<FireIce>().infire && _jumpTimeoutDelta <= 0.0f)//jump when fire
+				if (_input.jump && _jumpTimeoutDelta <= 0.0f||	!nofireice && fireicemgr.inFire && _jumpTimeoutDelta <= 0.0f)//jump when fire
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);

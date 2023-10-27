@@ -5,13 +5,24 @@ using TMPro;
 
 public class FireIce : MonoBehaviour
 {
+    public GameObject fireicemanager;
     public Material fire;
     public Material ice;
     public bool istrue = false;
+<<<<<<< Updated upstream
    
     public GameObject ToggleText;
+=======
+>>>>>>> Stashed changes
     public bool inice = false;
     public bool infire = false;
+ 
+
+    public void Start()
+    {
+        fireicemanager = gameObject.transform.parent.gameObject;
+    }
+
     public void colorchange()
     {
         ToggleText = GameObject.Find("Text");
@@ -44,14 +55,15 @@ public class FireIce : MonoBehaviour
         {
             if(this.CompareTag("ice"))
             {
-                inice = true;
-                infire = false;
+                fireicemanager.GetComponent<FireIceManager>().inIce=true;
+                fireicemanager.GetComponent<FireIceManager>().inFire = false;
+
                 Debug.Log("ice");
             }
             else
             {
-                inice = false;
-                infire = true;
+                fireicemanager.GetComponent<FireIceManager>().inIce = false;
+                fireicemanager.GetComponent<FireIceManager>().inFire = true;
                 Debug.Log("fire");
             }
             
@@ -61,18 +73,8 @@ public class FireIce : MonoBehaviour
     {
         if (other.CompareTag("playerbody"))
         {
-            if (this.CompareTag("ice"))
-            {
-                inice = false;
-                infire = false;
-             
-            }
-            else
-            {
-                inice = false;
-                infire = false;
-               
-            }
+            fireicemanager.GetComponent<FireIceManager>().inIce = false;
+            fireicemanager.GetComponent<FireIceManager>().inFire = false;
 
         }
     }
