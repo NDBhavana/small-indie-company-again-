@@ -1427,6 +1427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToggleFallDamage: 1
+  transitscript: {fileID: 0}
 --- !u!64 &1228851012
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2036,7 +2037,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 9.999999, y: 0.1, z: 10}
+  m_Size: {x: 9.999999, y: 0.5, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1705917504
 MonoBehaviour:
@@ -2051,6 +2052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToggleFallDamage: 1
+  transitscript: {fileID: 0}
 --- !u!1001 &1951801655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2112,8 +2114,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8690042443155822079, guid: 571086bf1aec68b48b23ea5cc629d4e1, type: 3}
+      propertyPath: fallscene
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690042443155822079, guid: 571086bf1aec68b48b23ea5cc629d4e1, type: 3}
       propertyPath: sceneindex
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
