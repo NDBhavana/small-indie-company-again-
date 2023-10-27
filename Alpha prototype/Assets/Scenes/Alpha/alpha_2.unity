@@ -796,6 +796,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1792324769}
     m_Modifications:
+    - target: {fileID: 1192680909120566451, guid: 52e7e50b764946c44bd6b80a0067fc92, type: 3}
+      propertyPath: oppositeType
+      value: daynight
+      objectReference: {fileID: 0}
     - target: {fileID: 1452151664184406288, guid: 52e7e50b764946c44bd6b80a0067fc92, type: 3}
       propertyPath: m_text
       value: Day!
