@@ -18,6 +18,7 @@ TagManager:
   - Prey
   - Moving Box
   - Pressure_plate
+  - Text
   layers:
   - Default
   - TransparentFX
