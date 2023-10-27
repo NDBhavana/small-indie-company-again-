@@ -143,45 +143,50 @@ namespace StarterAssets
 
 		private void Update()
 		{//fire and ice mod
-            if (!nofireice)
-            {
-				if (fireicemgr.inFire)
+			if (fireicemgr)
+			{
+				if (!nofireice)
 				{
-					JumpHeight = jh * jhfactor;
-				}
-				if (fireicemgr.inIce)
-				{
-					JumpHeight = jh * jhfactor;
-					MoveSpeed = MoveSpeedice;
-					SpeedChangeRate = SpeedChangeRateice;
-					SprintSpeed = SprintSpeedice;
-					stopspeed = Mathf.Lerp(MoveSpeed, 0.0f, t);
-					t += 0.5f * Time.deltaTime;
-					if (t > 1.0f)
+					if (fireicemgr.inFire)
 					{
-						t = 0.0f;
+						JumpHeight = jh * jhfactor;
+					}
+					if (fireicemgr.inIce)
+					{
+						JumpHeight = jh * jhfactor;
+						MoveSpeed = MoveSpeedice;
+						SpeedChangeRate = SpeedChangeRateice;
+						SprintSpeed = SprintSpeedice;
+						stopspeed = Mathf.Lerp(MoveSpeed, 0.0f, t);
+						t += 0.5f * Time.deltaTime;
+						if (t > 1.0f)
+						{
+							t = 0.0f;
+						}
 					}
 				}
+
+				
+
+
+				if (!fireicemgr.inFire && !fireicemgr.inIce)//reset to original values if out of fire
+				{
+					JumpHeight = jh;
+					MoveSpeed = mspeed;
+					SprintSpeed = spspeed;
+					SpeedChangeRate = speedchanger;
+					stopspeed = 0.0f;
+
+				}
 			}
-			
-			if (nofireice)//reset to original values if no fire or ice
+
+			else//reset to original values if no fire or ice
 			{
 				JumpHeight = jh;
 				MoveSpeed = mspeed;
 				SprintSpeed = spspeed;
 				SpeedChangeRate = speedchanger;
 				stopspeed = 0.0f;
-			}
-
-			
-			if (!fireicemgr.inFire && !fireicemgr.inIce)//reset to original values if out of fire
-			{
-				JumpHeight = jh;
-				MoveSpeed = mspeed;
-				SprintSpeed = spspeed;
-				SpeedChangeRate = speedchanger;
-				stopspeed = 0.0f;
-
 			}
 
 

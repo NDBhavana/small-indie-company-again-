@@ -5,16 +5,21 @@ using UnityEngine;
 public class Starcollection : MonoBehaviour
 {
     public bool iscollect = false;
-    public GameObject otherObject;
+    public GameObject starManager;
 
-     void OnTriggerEnter(Collider other)
+    private void Start()
+    {
+        starManager = gameObject.transform.parent.gameObject;
+    }
+
+    void OnTriggerEnter(Collider other)
     {
         Debug.Log("work");
         if (other.tag=="Player")
         {
             Debug.Log("entered player");
 
-            otherObject.GetComponent<Starmanager>().star+=1;
+            starManager.GetComponent<Starmanager>().star+=1;
            // StarManager starManager = FindObjectOfType<StarManager>();
            //Starmanager.star+=1;
           

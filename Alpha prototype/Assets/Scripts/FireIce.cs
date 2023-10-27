@@ -9,11 +9,9 @@ public class FireIce : MonoBehaviour
     public Material fire;
     public Material ice;
     public bool istrue = false;
-<<<<<<< Updated upstream
-   
-    public GameObject ToggleText;
-=======
->>>>>>> Stashed changes
+    //public GameObject ToggleText;
+
+
     public bool inice = false;
     public bool infire = false;
  
@@ -25,13 +23,13 @@ public class FireIce : MonoBehaviour
 
     public void colorchange()
     {
-        ToggleText = GameObject.Find("Text");
+        //ToggleText = GameObject.Find("Text");
         if (istrue)
         {
             this.gameObject.GetComponent<Renderer>().material = fire;
             this.gameObject.tag = "fire";
             //this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 10f, ForceMode.Impulse);
-            ToggleText.gameObject.GetComponent<TextMeshPro>().text = "Fire!";
+            //ToggleText.gameObject.GetComponent<TextMeshPro>().text = "Fire!";
             istrue = false;
 
         }
@@ -41,7 +39,7 @@ public class FireIce : MonoBehaviour
             this.gameObject.GetComponent<Renderer>().material = ice;
             //transform.Translate(Vector3.forward);
             this.gameObject.tag = "ice";
-            ToggleText.gameObject.GetComponent<TextMeshPro>().text = "Ice!";
+            //ToggleText.gameObject.GetComponent<TextMeshPro>().text = "Ice!";
             istrue = true;
 
         }
