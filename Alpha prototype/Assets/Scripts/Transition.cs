@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Transition : MonoBehaviour
 {
     public int sceneindex;
+    public int currentsceneindex;
     public int fallscene = 4;
     public GameAnalytics gameAnalytics;
     
@@ -13,24 +14,26 @@ public class Transition : MonoBehaviour
     private void Start()
     {
         gameAnalytics = GameObject.FindObjectOfType<GameAnalytics>();
-        
+        currentsceneindex= SceneManager.GetActiveScene().buildIndex;
+
     }
 
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("entered");
-        if (sceneindex == fallscene && GameObject.Find("PlayerController Variant").GetComponent<FallDamageDetection>().ToggleFallDamage)
-        {
+        //if (sceneindex == fallscene+1 && GameObject.Find("PlayerController Variant").GetComponent<FallDamageDetection>().ToggleFallDamage)
+        //{
             //do nothing
 
-        }
-        else if (other.CompareTag("playerbody") && gameAnalytics != null)
+        //}
+        if (other.CompareTag("playerbody") && gameAnalytics != null)
         {
             gameAnalytics.DoorOpened(sceneindex);
             SceneManager.LoadScene(sceneindex);
             Debug.Log("transit");
         }
     }
+    
         
             
 }
