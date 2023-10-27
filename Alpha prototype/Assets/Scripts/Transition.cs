@@ -8,7 +8,7 @@ public class Transition : MonoBehaviour
     public int sceneindex;
     public int fallscene = 4;
     public GameAnalytics gameAnalytics;
-    public GameObject fallscript;
+    
 
     private void Start()
     {
@@ -18,6 +18,7 @@ public class Transition : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("entered");
         if (sceneindex == fallscene && GameObject.Find("PlayerController Variant").GetComponent<FallDamageDetection>().ToggleFallDamage)
         {
             //do nothing
@@ -27,6 +28,7 @@ public class Transition : MonoBehaviour
         {
             gameAnalytics.DoorOpened(sceneindex);
             SceneManager.LoadScene(sceneindex);
+            Debug.Log("transit");
         }
     }
         
