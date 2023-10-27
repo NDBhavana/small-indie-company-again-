@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 public class FallDamageDetection : MonoBehaviour
 {
     public bool ToggleFallDamage = true;
+    public GameObject transitscript;
     private void OnTriggerEnter(Collider other) {
         if(ToggleFallDamage)
         {
             if(other.gameObject.tag == "playerbody"){
-            Debug.Log("My name is Malenia!");
+                //Debug.Log("My name is Malenia!");
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                SceneManager.LoadScene(5);
+                SceneManager.LoadScene(4);
             }
         }
         
