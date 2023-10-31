@@ -19,6 +19,8 @@ TagManager:
   - Moving Box
   - Pressure_plate
   - Text
+  - Follow
+  - Stay
   layers:
   - Default
   - TransparentFX

@@ -45,6 +45,10 @@ public class Opposite : MonoBehaviour
                 //this.gameObject.GetComponent<DayNightCycle>().ChangeTime();
                 this.gameObject.GetComponentInParent<DayNightCycle>().ChangeTime();
                 break;
+            case "follow2stay":
+                //code for follow 2 stay
+                this.gameObject.GetComponent<follow2stay>().change();
+                break;
             case "default":
                 break;
         }
