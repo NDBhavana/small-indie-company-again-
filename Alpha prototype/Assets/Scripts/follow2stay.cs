@@ -85,15 +85,21 @@ void Update()
 
     public void change()
     {
+        Material[] materials = this.gameObject.GetComponent<Renderer>().materials;
+        
         if (this.gameObject.tag == "Follow")
         {
+            materials[1] = staymaterial;
             this.gameObject.tag = "Stay";
-            this.gameObject.GetComponent<Renderer>().material = staymaterial;
+            this.gameObject.GetComponent<Renderer>().materials = materials;
+            //this.gameObject.transform.GetChild(0).GetComponent<Renderer>().material = staymaterial;
         }
         else
         {
+            materials[1] = followmaterial;
             this.gameObject.tag = "Follow";
-            this.gameObject.GetComponent<Renderer>().material = followmaterial;
+            this.gameObject.GetComponent<Renderer>().materials = materials;
+            //this.gameObject.transform.GetChild(0).GetComponent<Renderer>().material = followmaterial;
         }
     }
     void OnTriggerStay(Collider other)
