@@ -49,6 +49,10 @@ public class Opposite : MonoBehaviour
                 //code for follow 2 stay
                 this.gameObject.GetComponent<follow2stay>().change();
                 break;
+            case "MagnetismEffect":
+                //code for Magnetism effect
+                this.gameObject.GetComponent<MagnetismEffect>().ToggleMagnetType();
+                break;
             case "default":
                 break;
         }
