@@ -11,21 +11,69 @@ public class follow2stay : MonoBehaviour
     public float speed = 5;
     public float step;
     public GameObject followstaymgr;
+    public float rightbound;
+    public float leftbound;
+    public float frontbound;
+    public float backbound;
+    public float fixed_y;
+    public float x_pos;
+    public float z_pos;
+    Vector3 newpos;
+    Vector3 ppos;
+    public bool out_of_bounds = false;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("playerbody");
-        followstaymgr = gameObject.transform.parent.gameObject;
+        followstaymgr = GameObject.Find("follow-stay mgr"); 
 
-    }
+        fixed_y = transform.position.y;
+        Debug.Log(fixed_y);
+}
 
-    // Update is called once per frame
-    void Update()
+// Update is called once per frame
+void Update()
     {
         step = speed * Time.deltaTime;
-        if (this.gameObject.tag == "Follow" && Vector3.Distance(transform.position,player.transform.position)> range)
+        x_pos = transform.position.x;//local position is only used for checks because it makes the check easier, rest we use position relative to whatever scale the object is using
+        
+        out_of_bounds=false;
+        
+        ppos = player.transform.position;
+       
+
+        if (this.gameObject.tag == "Follow" && Vector3.Distance(transform.position, new Vector3(ppos.x, fixed_y, ppos.z)) > range)
         {
-            transform.position= Vector3.MoveTowards(transform.position, player.transform.position, step);
+           
+            newpos= Vector3.MoveTowards(transform.position, new Vector3(ppos.x,fixed_y,ppos.z), step);
+            if ( newpos.x> rightbound)
+            {
+
+                out_of_bounds = true;
+                newpos.x = rightbound;
+            }
+            else if (newpos.x < leftbound)
+            {
+
+                out_of_bounds = true;
+                newpos.x = leftbound;
+            }
+
+
+            
+            if (newpos.z > frontbound)
+            {
+
+                out_of_bounds = true;
+                newpos.z= frontbound;
+            }
+            else if (newpos.z < backbound)
+            {
+
+                out_of_bounds = true;
+                newpos.z = backbound;
+            }
+            transform.position = newpos;
         }
         else
         {
