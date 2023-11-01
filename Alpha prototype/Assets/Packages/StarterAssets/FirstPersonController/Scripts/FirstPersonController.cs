@@ -34,7 +34,7 @@ namespace StarterAssets
 		public float stopspeed;
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
-		public float JumpHeight = 1.2f;
+		public float JumpHeight = 1.5f;
 		public float jh;//variable to reset original jumpheight when no fire
 		public float jhfactor = 5;//multiply jumpheight by this when in fire
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
@@ -150,6 +150,7 @@ namespace StarterAssets
 					if (fireicemgr.inFire)
 					{
 						JumpHeight = jh * jhfactor;
+						
 					}
 					if (fireicemgr.inIce)
 					{
