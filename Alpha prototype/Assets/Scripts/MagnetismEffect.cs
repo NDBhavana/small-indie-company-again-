@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MagnetismEffect : MonoBehaviour
 {
-   public Material NpoleMaterial; 
-    public Material SpoleMaterial; 
+    public Material NpoleMaterial;
+    public Material SpoleMaterial;
 
     private Renderer cubeRenderer;
-    private bool isNmagnet = true;
+    private bool isNmagnet;
 
     void Start()
     {
@@ -18,14 +18,21 @@ public class MagnetismEffect : MonoBehaviour
 
     void SetInitialMaterial()
     {
-        // Set the initial material to the Npole one
-        cubeRenderer.material = isNmagnet ? NpoleMaterial : SpoleMaterial;
-        gameObject.tag = isNmagnet ? "Nmagnet" : "Smagnet";
+        if (gameObject.CompareTag("Nmagnet"))
+        {
+            isNmagnet = true;
+            cubeRenderer.material = NpoleMaterial;
+        }
+        else if (gameObject.CompareTag("Smagnet"))
+        {
+            isNmagnet = false;
+            cubeRenderer.material = SpoleMaterial;
+        }
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) // You can change the input condition as needed
+        if (Input.GetButtonDown("Fire1")) 
         {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit))

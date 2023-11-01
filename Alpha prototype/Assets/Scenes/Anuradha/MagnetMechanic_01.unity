@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89333c8d305ee04c8a59150facb277a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oppositeType: default
+  oppositeType: MagnetismEffect
 --- !u!1 &142665759
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 774878239}
   - component: {fileID: 774878238}
   - component: {fileID: 774878242}
+  - component: {fileID: 774878243}
   m_Layer: 0
   m_Name: Smagnet
   m_TagString: Smagnet
@@ -536,6 +537,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NpoleMaterial: {fileID: 2100000, guid: b9c0914e550ca42b499b87ce2d520e7a, type: 2}
   SpoleMaterial: {fileID: 2100000, guid: ae772bd3cd64d44e9991313506d9735e, type: 2}
+--- !u!114 &774878243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774878237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89333c8d305ee04c8a59150facb277a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oppositeType: MagnetismEffect
 --- !u!1 &1105588987
 GameObject:
   m_ObjectHideFlags: 0
