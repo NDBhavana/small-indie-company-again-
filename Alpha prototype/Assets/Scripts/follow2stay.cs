@@ -10,11 +10,13 @@ public class follow2stay : MonoBehaviour
     public float range;
     public float speed = 5;
     public float step;
+    public GameObject followstaymgr;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("playerbody");
-        
+        followstaymgr = gameObject.transform.parent.gameObject;
+
     }
 
     // Update is called once per frame
@@ -45,5 +47,21 @@ public class follow2stay : MonoBehaviour
             this.gameObject.tag = "Follow";
             this.gameObject.GetComponent<Renderer>().material = followmaterial;
         }
+    }
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("playerbody"))
+        {
+            followstaymgr.GetComponent<followstaymgr>().onblock = true;
+        }
+        
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("playerbody"))
+        {
+            followstaymgr.GetComponent<followstaymgr>().onblock = false;
+        }
+
     }
 }

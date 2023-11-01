@@ -2109,6 +2109,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1083358721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8254226309886596388, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
+  m_PrefabInstance: {fileID: 1312600284}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1173474650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7100770417957094718, guid: cb8fa42df6503534c8bf8dc45f42d3ff, type: 3}
@@ -2203,9 +2208,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 220.28363
       objectReference: {fileID: 0}
+    - target: {fileID: 2772092648968014299, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
+      propertyPath: PauseMenu
+      value: 
+      objectReference: {fileID: 1083358721}
     - target: {fileID: 7461815187160215157, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
       propertyPath: m_Name
       value: UI(tutorial+pausemenu)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254226309886596388, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8290127778408022568, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
       propertyPath: m_LocalPosition.x
