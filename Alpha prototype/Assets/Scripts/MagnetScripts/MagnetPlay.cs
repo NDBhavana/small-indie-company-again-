@@ -5,7 +5,7 @@ using UnityEngine;
 public class MagnetPlay : MonoBehaviour
 {
     public string otherMagnetTag = "Smagnet"; // Tag of the other magnet cube
-    public float moveSpeed = 1.0f; // Adjust the movement speed as needed
+    public float moveSpeed = 5.0f; // Adjust the movement speed as needed
 
     private GameObject otherMagnet;
     private Collider thisCollider;
@@ -58,6 +58,10 @@ public class MagnetPlay : MonoBehaviour
     {
         Vector3 moveDirection = (otherMagnet.transform.position - transform.position).normalized;
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+
+        // Move the other magnet as well
+        Vector3 otherMoveDirection = (transform.position - otherMagnet.transform.position).normalized;
+        otherMagnet.transform.Translate(otherMoveDirection * moveSpeed * Time.deltaTime);
     }
 
     bool AreCollidersTouching()
