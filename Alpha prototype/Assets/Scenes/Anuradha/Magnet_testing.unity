@@ -229,8 +229,8 @@ GameObject:
   - component: {fileID: 433271338}
   - component: {fileID: 433271337}
   - component: {fileID: 433271336}
-  - component: {fileID: 433271340}
   - component: {fileID: 433271341}
+  - component: {fileID: 433271342}
   m_Layer: 0
   m_Name: South
   m_TagString: Smagnet
@@ -318,26 +318,12 @@ Transform:
   m_GameObject: {fileID: 433271335}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 20, z: 0}
+  m_LocalPosition: {x: -4, y: 15, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &433271340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 433271335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a426be387f18446bb86dc6e3472b9511, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  otherMagnetTag: Smagnet
-  moveSpeed: 5
 --- !u!54 &433271341
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -365,6 +351,20 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &433271342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433271335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c42da310fe1e496bb0c3657b4da8f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherMagnetTag: Smagnet
+  moveSpeed: 5
 --- !u!1 &508626100
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,11 +381,11 @@ GameObject:
   - component: {fileID: 508626106}
   m_Layer: 0
   m_Name: Rep_Nmag
-  m_TagString: Nmagnet
+  m_TagString: Smagnet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &508626101
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -454,7 +454,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9c0914e550ca42b499b87ce2d520e7a, type: 2}
+  - {fileID: 2100000, guid: ae772bd3cd64d44e9991313506d9735e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -493,7 +493,7 @@ Transform:
   m_GameObject: {fileID: 508626100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: 10, z: 0}
+  m_LocalPosition: {x: -8, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -508,10 +508,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 508626100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a426be387f18446bb86dc6e3472b9511, type: 3}
+  m_Script: {fileID: 11500000, guid: cd63b24afbf6044debf4e450ea7b9578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherMagnetTag: Smagnet
+  otherMagnetTag: Nmagnet
   moveSpeed: 5
 --- !u!1 &720726781
 GameObject:
@@ -529,11 +529,11 @@ GameObject:
   - component: {fileID: 720726787}
   m_Layer: 0
   m_Name: Rep_Nmag (1)
-  m_TagString: Nmagnet
+  m_TagString: Smagnet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &720726782
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -576,7 +576,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -602,7 +602,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9c0914e550ca42b499b87ce2d520e7a, type: 2}
+  - {fileID: 2100000, guid: ae772bd3cd64d44e9991313506d9735e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -641,7 +641,7 @@ Transform:
   m_GameObject: {fileID: 720726781}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 10, z: 0}
+  m_LocalPosition: {x: -4, y: 10, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -656,7 +656,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 720726781}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a426be387f18446bb86dc6e3472b9511, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c42da310fe1e496bb0c3657b4da8f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   otherMagnetTag: Smagnet
@@ -675,6 +675,8 @@ GameObject:
   - component: {fileID: 1428286926}
   - component: {fileID: 1428286925}
   - component: {fileID: 1428286930}
+  - component: {fileID: 1428286932}
+  - component: {fileID: 1428286931}
   m_Layer: 0
   m_Name: North
   m_TagString: Nmagnet
@@ -694,8 +696,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a426be387f18446bb86dc6e3472b9511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherMagnetTag: Smagnet
-  moveSpeed: 5
 --- !u!65 &1428286926
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -776,7 +776,7 @@ Transform:
   m_GameObject: {fileID: 1428286924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 5, z: 0}
+  m_LocalPosition: {x: -4, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -809,6 +809,34 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1428286931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428286924}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c42da310fe1e496bb0c3657b4da8f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherMagnetTag: Smagnet
+  moveSpeed: 5
+--- !u!114 &1428286932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428286924}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd63b24afbf6044debf4e450ea7b9578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherMagnetTag: Smagnet
+  moveSpeed: 5
 --- !u!1 &1491774699
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,7 +923,7 @@ Transform:
   m_GameObject: {fileID: 1491774699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.88, y: 11.94, z: -17.14}
+  m_LocalPosition: {x: -4.36, y: 15.08, z: -12.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -908,6 +936,6 @@ SceneRoots:
   - {fileID: 1491774702}
   - {fileID: 24524735}
   - {fileID: 1428286929}
-  - {fileID: 433271339}
   - {fileID: 508626105}
+  - {fileID: 433271339}
   - {fileID: 720726786}
