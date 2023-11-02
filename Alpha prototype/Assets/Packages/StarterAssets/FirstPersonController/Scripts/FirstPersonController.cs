@@ -231,11 +231,6 @@ namespace StarterAssets
 				}
 
 
-				else//reset to original values if no slime
-				{
-					JumpHeight = jh;
-
-				}
 
 
 			JumpAndGravity();
