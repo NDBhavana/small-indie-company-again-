@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 100077702}
   - component: {fileID: 100077706}
   - component: {fileID: 100077707}
+  - component: {fileID: 100077708}
   m_Layer: 0
   m_Name: NMagnet
   m_TagString: Nmagnet
@@ -224,7 +225,7 @@ Transform:
   m_GameObject: {fileID: 100077701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.57, y: 4.45, z: -1.08}
+  m_LocalPosition: {x: 3, y: 5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -242,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25d85a51b0464736a31df1bc4257c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  repelDistance: 10
   NpoleMaterial: {fileID: 2100000, guid: b9c0914e550ca42b499b87ce2d520e7a, type: 2}
   SpoleMaterial: {fileID: 2100000, guid: ae772bd3cd64d44e9991313506d9735e, type: 2}
 --- !u!114 &100077707
@@ -257,6 +259,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oppositeType: MagnetismEffect
+--- !u!54 &100077708
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100077701}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &142665759
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,11 +398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7849832920347755856, guid: d78b01dc49b50c84f932206cb6391dde, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 7849832920347755856, guid: d78b01dc49b50c84f932206cb6391dde, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.21
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7849832920347755856, guid: d78b01dc49b50c84f932206cb6391dde, type: 3}
       propertyPath: m_LocalPosition.z
@@ -430,6 +459,7 @@ GameObject:
   - component: {fileID: 774878238}
   - component: {fileID: 774878242}
   - component: {fileID: 774878243}
+  - component: {fileID: 774878244}
   m_Layer: 0
   m_Name: Smagnet
   m_TagString: Smagnet
@@ -517,7 +547,7 @@ Transform:
   m_GameObject: {fileID: 774878237}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7, y: 4.53, z: -0.96}
+  m_LocalPosition: {x: -3, y: 5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -535,6 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25d85a51b0464736a31df1bc4257c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  repelDistance: 10
   NpoleMaterial: {fileID: 2100000, guid: b9c0914e550ca42b499b87ce2d520e7a, type: 2}
   SpoleMaterial: {fileID: 2100000, guid: ae772bd3cd64d44e9991313506d9735e, type: 2}
 --- !u!114 &774878243
@@ -550,6 +581,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oppositeType: MagnetismEffect
+--- !u!54 &774878244
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774878237}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1105588987
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +812,7 @@ Transform:
   m_GameObject: {fileID: 1307877794}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.73, z: 4.87}
+  m_LocalPosition: {x: 0, y: 0.5, z: 4.87}
   m_LocalScale: {x: 5, y: 3, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
