@@ -51,7 +51,7 @@ public class Opposite : MonoBehaviour
                 break;
             case "MagnetismEffect":
                 //code for Magnetism effect
-                this.gameObject.GetComponent<MagnetismEffect>().ToggleMagnetType();
+                this.gameObject.GetComponent<MagnetNandila>().colorchangeM();
                 break;
             case "default":
                 break;

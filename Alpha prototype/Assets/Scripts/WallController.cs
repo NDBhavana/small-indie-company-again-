@@ -25,6 +25,26 @@ public class WallController : MonoBehaviour
 
         // Set the wall to the initial red material.
         wallRenderer.material = stopMaterial;
+        if (this.tag == "Stop")
+        {
+            isGreen = false;
+            wallRenderer.material = stopMaterial;
+            txt.text = "STOP";
+            if (wallCollider != null)
+            {
+                wallCollider.isTrigger = false;
+            }
+        }
+        else
+        {
+            isGreen = true;
+            wallRenderer.material = startMaterial;
+            txt.text = "GO";
+            if (wallCollider != null)
+            {
+                wallCollider.isTrigger = true;
+            }
+        }
     }
 
     public void CallFunction()
