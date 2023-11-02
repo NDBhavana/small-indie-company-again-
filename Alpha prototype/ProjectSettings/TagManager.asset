@@ -24,6 +24,9 @@ TagManager:
   - Nmagnet
   - Smagnet
   - Selectable
+  - Npole
+  - Spole
+  - attract
   layers:
   - Default
   - TransparentFX
