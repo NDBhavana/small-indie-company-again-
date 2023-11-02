@@ -23,7 +23,7 @@ public class reached_checkpoint : MonoBehaviour
     {
         if (other.CompareTag("playerbody") && !lead)
         {
-            Tutorial_txt.GetComponent<TMP_Text>().SetText("Shoot slime to lead it to pressure plate");
+            Tutorial_txt.GetComponent<TMP_Text>().SetText("Shoot slime and lead it to pressure plate");
             x_point.GetComponent<reached_x>().stage1 = false;
         }
     }
