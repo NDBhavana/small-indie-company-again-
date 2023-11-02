@@ -9,10 +9,10 @@ public class followstaymgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach (Transform child in transform)
-        {
-            blocks.Add(child.gameObject);
-        }
+        //foreach (Transform child in transform)
+        //{
+         //   blocks.Add(child.gameObject);
+        //}
     }
 
     // Update is called once per frame

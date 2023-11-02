@@ -13,9 +13,12 @@ namespace StarterAssets
 	{
 		[Header("Player")]
 		public FireIceManager fireicemgr;
+		public followstaymgr followstaymgr;
+		public bool nofollowstay=true;
 		public bool nofireice = true;
 		public bool infire = false;
 		public bool inice = false;
+		public bool onslime = false;
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
 		public float MoveSpeedice = 10.0f;
@@ -35,8 +38,8 @@ namespace StarterAssets
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.5f;
-		public float jh;//variable to reset original jumpheight when no fire
-		public float jhfactor = 5;//multiply jumpheight by this when in fire
+		public float jh;//variable to reset original jumpheight when no fire or slime
+		public float jhfactor = 5;//multiply jumpheight by this when in fire or on slime
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
 		public float Gravity = -15.0f;
 
@@ -138,6 +141,22 @@ namespace StarterAssets
             {
 				nofireice = true;
             }
+			try
+			{
+				followstaymgr = GameObject.Find("follow-stay mgr").GetComponent<followstaymgr>();
+			}
+			catch
+			{
+				followstaymgr = null;
+			}
+			if (followstaymgr != null)
+			{
+				nofollowstay = false;
+			}
+			else
+			{
+				nofollowstay = true;
+			}
 
 		}
 
@@ -150,7 +169,7 @@ namespace StarterAssets
 					if (fireicemgr.inFire)
 					{
 						JumpHeight = jh * jhfactor;
-						
+
 					}
 					if (fireicemgr.inIce)
 					{
@@ -167,7 +186,7 @@ namespace StarterAssets
 					}
 				}
 
-				
+
 
 
 				if (!fireicemgr.inFire && !fireicemgr.inIce)//reset to original values if out of fire
@@ -180,15 +199,38 @@ namespace StarterAssets
 
 				}
 			}
-
-			else//reset to original values if no fire or ice
-			{
+            else
+            {
 				JumpHeight = jh;
 				MoveSpeed = mspeed;
 				SprintSpeed = spspeed;
 				SpeedChangeRate = speedchanger;
 				stopspeed = 0.0f;
 			}
+				//slime mod
+				if (followstaymgr)
+				{
+					if (!nofollowstay)
+					{
+						if (followstaymgr.onblock)
+						{
+							JumpHeight = jh * jhfactor;
+							MoveSpeed = mspeed;
+							SprintSpeed = spspeed;
+							SpeedChangeRate = speedchanger;
+							stopspeed = 0.0f;
+
+						}
+						else //reset to original values if not on slime
+						{
+							JumpHeight = jh;
+							
+						}
+					}
+
+				}
+
+
 
 
 			JumpAndGravity();

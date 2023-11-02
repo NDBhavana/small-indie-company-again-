@@ -21,6 +21,8 @@ TagManager:
   - Text
   - Follow
   - Stay
+  - Nmagnet
+  - Smagnet
   layers:
   - Default
   - TransparentFX
