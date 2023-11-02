@@ -31,7 +31,7 @@ public class PressurePlate : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
         Debug.Log("work");
-        if (other.tag == "Predator"|| other.tag == "Prey"||other.tag=="Player")
+        if (other.tag == "Predator"|| other.tag == "Prey"||other.tag=="Player"||other.tag=="Follow"||other.tag=="Stay")
         {
             Debug.Log("hi");
             isPressed = true; // Set the pressure plate as pressed
@@ -40,7 +40,7 @@ public class PressurePlate : MonoBehaviour
 
      void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Predator" || other.tag == "Prey" || other.tag == "Player")
+        if (other.tag == "Predator" || other.tag == "Prey" || other.tag == "Player"|| other.tag == "Follow" || other.tag == "Stay")
         {
             isPressed = false; // Set the pressure plate as not pressed
         }
