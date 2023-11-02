@@ -24,9 +24,14 @@ TagManager:
   - Nmagnet
   - Smagnet
   - Selectable
+<<<<<<< Updated upstream
   - Npole
   - Spole
   - attract
+=======
+  - Start
+  - Stop
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
