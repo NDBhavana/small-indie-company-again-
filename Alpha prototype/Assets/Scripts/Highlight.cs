@@ -1,53 +1,47 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Highlight : MonoBehaviour
+public class OutlineSelection : MonoBehaviour
 {
-    public Camera cam;
+    private Transform highlight;
+    private Transform selection;
+    private RaycastHit raycastHit;
 
     void Update()
     {
-        HighlightObject();  
-    }
-
-    private void HighlightObject()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit)) //hits an object
+        // Highlight
+        if (highlight != null)
         {
-            //Highlight the object
-        switch (hit.transform.tag)
+            highlight.gameObject.GetComponent<Outline>().enabled = false;
+            highlight = null;
+        }
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out raycastHit)) //Make sure you have EventSystem in the hierarchy before using EventSystem
         {
-            case "fire":
-                
-                break;
-
-            case "ice":
-                
-                break;
-
-            case "Untagged":
-                
-                break;
-            case "falldamage":
-
-               
-                break;
-            case "predator2prey":
-                
-                break;
-            case "daynight":
-                
-                break;
-            case "follow2stay":
-                
-                break;
-            case "default":
-                break;
+            highlight = raycastHit.transform;
+            if (highlight.CompareTag("Selectable") || highlight.CompareTag("ice") || highlight.CompareTag("fire") || highlight.CompareTag("Follow") || highlight.CompareTag("Stay") || highlight.CompareTag("Text") || highlight.CompareTag("Predator") || highlight.CompareTag("Prey") && highlight != selection)
+            {
+                if (highlight.gameObject.GetComponent<Outline>() != null)
+                {
+                    highlight.gameObject.GetComponent<Outline>().enabled = true;
+                }
+                else
+                {
+                    Outline outline = highlight.gameObject.AddComponent<Outline>();
+                    outline.enabled = true;
+                    highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.magenta;
+                    highlight.gameObject.GetComponent<Outline>().OutlineWidth = 7.0f;
+                }
+            }
+            else
+            {
+                highlight = null;
+            }
         }
-        }
-        
+
     }
 
 }

@@ -23,6 +23,7 @@ TagManager:
   - Stay
   - Nmagnet
   - Smagnet
+  - Selectable
   layers:
   - Default
   - TransparentFX
