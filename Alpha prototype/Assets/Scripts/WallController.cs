@@ -30,12 +30,20 @@ public class WallController : MonoBehaviour
             isGreen = false;
             wallRenderer.material = stopMaterial;
             txt.text = "STOP";
+            if (wallCollider != null)
+            {
+                wallCollider.isTrigger = false;
+            }
         }
         else
         {
             isGreen = true;
             wallRenderer.material = startMaterial;
             txt.text = "GO";
+            if (wallCollider != null)
+            {
+                wallCollider.isTrigger = true;
+            }
         }
     }
 

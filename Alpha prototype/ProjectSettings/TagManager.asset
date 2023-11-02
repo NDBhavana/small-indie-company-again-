@@ -4,34 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CinemachineTarget
-  - Death
-  - Enemy
-  - Friend
-  - playerbody
-  - enemy+friend
-  - fire
   - ice
-  - heat
-  - cold
-  - Predator
-  - Prey
-  - Moving Box
-  - Pressure_plate
-  - Text
+  - playerbody
+  - CinemachineTarget
   - Follow
   - Stay
-  - Nmagnet
-  - Smagnet
-  - Selectable
-<<<<<<< Updated upstream
-  - Npole
   - Spole
+  - Npole
   - attract
-=======
+  - fire
   - Start
   - Stop
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -39,7 +22,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Weapon
+  - 
   - 
   - 
   - 
