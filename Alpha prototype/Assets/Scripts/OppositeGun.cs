@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class OppositeGun : MonoBehaviour
 {
     public Camera cam;
     public LineRenderer lineRender;
     public Transform rayOrigin;
-
+    GameObject Tutorial_text_l1;
+    void Start()
+    {
+        Tutorial_text_l1 = GameObject.Find("Tutorial text");
+    }
     void Update()
     {
         if(Input.GetButtonDown("Fire1"))
         {
             Shoot();
+            if (GunPickup.picked_up)//Only for gun tutorial, because gun pickup gets destroyed
+            {
+                Tutorial_text_l1.GetComponent<TMP_Text>().SetText("Shoot the STOP wall to make it GO(invertable objects light up)");
+                GunPickup.picked_up = false;
+
+            }
         }
     }
 

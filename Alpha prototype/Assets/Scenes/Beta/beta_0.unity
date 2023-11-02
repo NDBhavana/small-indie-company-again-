@@ -1065,6 +1065,7 @@ MonoBehaviour:
   oppwall: {fileID: 557419441}
   passage: {fileID: 7162306744009739937}
   tutorial: {fileID: 0}
+  picked_up: 0
 --- !u!54 &294573930
 Rigidbody:
   m_ObjectHideFlags: 0
