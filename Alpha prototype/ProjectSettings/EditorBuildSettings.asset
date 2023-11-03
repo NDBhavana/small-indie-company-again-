@@ -38,26 +38,53 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Menu/Try again.unity
     guid: 9e009e679d5f46644babde8d0b033f34
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/beta_0.unity
     guid: 4333b7cccd0fe74438d44ab27cbf769b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/beta_1.unity
     guid: 1c7f59a7b2761724097750f272fc6f10
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/beta_2.unity
     guid: 2be6e9a0f4c935542b64c785b509607c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/beta_3.unity
     guid: b675e3ad632f97843af59c77af994095
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/beta_4.unity
     guid: 538068b6e8bbc05499980104e8d3f87d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/beta_5.unity
     guid: 76742db474478734ea39700475a58acf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu/Won.unity
     guid: 31f4df46895bed24bbcbc830a8336b43
+  - enabled: 1
+    path: Assets/Scenes/Temp_beta/beta_0.unity
+    guid: 1928650784822584191d14bdec36c52d
+  - enabled: 1
+    path: Assets/Scenes/Temp_beta/easy level.unity
+    guid: 270fc7e6a00696843af963e08db5648f
+  - enabled: 1
+    path: Assets/Scenes/Temp_beta/hard level.unity
+    guid: 9ea73f2a5b3590a48b151cf98b87ae16
+  - enabled: 1
+    path: Assets/Scenes/Temp_beta/Help-brief.unity
+    guid: 34a5f4c4cc17b6d40b348767f76f5bf4
+  - enabled: 1
+    path: Assets/Scenes/Temp_beta/Level Select.unity
+    guid: f08f797b679623b4fb5e165d3468f400
+  - enabled: 1
+    path: Assets/Scenes/Temp_beta/Magnet tutorial.unity
+    guid: 23aafd6c7cdd13141bef802e833462dc
+  - enabled: 1
+    path: Assets/Scenes/Temp_beta/slime tutorial.unity
+    guid: 3d628b0fcbfc0664088316bfb313a9db
+  - enabled: 1
+    path: Assets/Scenes/Temp_beta/Start.unity
+    guid: cb52c3cec885fb548ba312c89b2a1fc3
+  - enabled: 1
+    path: Assets/Scenes/Temp_beta/Won.unity
+    guid: 5f2ce1065d02b1440bddca1f2d0d63f9
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
