@@ -1073,6 +1073,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 176360665413371197, guid: bdf694a5c3d816142b0db9b49dd1756e, type: 3}
+      propertyPath: step
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 176360665413371197, guid: bdf694a5c3d816142b0db9b49dd1756e, type: 3}
       propertyPath: attractManager
       value: 
       objectReference: {fileID: 1424433888}

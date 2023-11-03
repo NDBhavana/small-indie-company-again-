@@ -29,13 +29,7 @@ public class UImanager : MonoBehaviour
                 Pause();
             }
         }
-        if (GamePaused)
-        {
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                SceneManager.LoadScene(1);
-            }
-        }
+        
        }
 
     
