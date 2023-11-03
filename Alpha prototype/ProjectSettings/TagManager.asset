@@ -11,6 +11,12 @@ TagManager:
   - playerbody
   - CinemachineTarget
   - Stop
+  - Pressure_plate
+  - Follow
+  - Stay
+  - FirstPlatform
+  - Pit
+  - SecondPlatform
   layers:
   - Default
   - TransparentFX
