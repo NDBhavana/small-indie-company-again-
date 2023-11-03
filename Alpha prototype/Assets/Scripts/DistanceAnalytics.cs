@@ -5,19 +5,29 @@ using UnityEngine.Networking;
 
 public class DistanceAnalytics : MonoBehaviour
 {
-    
     [SerializeField] private string URL;
     private long sessionID;
     private int level;
     private float distanceCovered;
 
-    public void Send(int sceneindex, float totalDistanceForScene)
+    private bool sendDataOnQuit = false;
+
+    private void OnApplicationQuit()
+    {
+        if (sendDataOnQuit)
+        {
+            // Send data to Google Forms before quitting the application
+            SendData();
+        }
+    }
+
+    public void Send(int sceneIndex, float totalDistanceForScene)
     {
         // Generate a session ID based on the current timestamp
         sessionID = (long)(Time.time * 1000);
 
-        // Set the level to the sceneindex
-        level = sceneindex;
+        // Set the level to the scene index
+        level = sceneIndex;
 
         // Set the distance covered to totalDistanceForScene
         distanceCovered = totalDistanceForScene;
@@ -57,5 +67,11 @@ public class DistanceAnalytics : MonoBehaviour
                 Debug.Log("Form upload complete!");
             }
         }
+    }
+
+    public void UploadDataOnQuit()
+    {
+        Debug.Log("APPLICATION QUIT");
+        sendDataOnQuit = true;
     }
 }
