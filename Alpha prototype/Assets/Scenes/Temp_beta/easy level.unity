@@ -3590,6 +3590,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Passage Exit (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7443296180649787752, guid: ace572f75163d294883120d328dae46c, type: 3}
+      propertyPath: fallscene
+      value: 900000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443296180649787752, guid: ace572f75163d294883120d328dae46c, type: 3}
+      propertyPath: sceneindex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443296180649787752, guid: ace572f75163d294883120d328dae46c, type: 3}
+      propertyPath: currentsceneindex
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

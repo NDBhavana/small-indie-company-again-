@@ -17,6 +17,11 @@ TagManager:
   - FirstPlatform
   - Pit
   - SecondPlatform
+  - Start
+  - Death
+  - Selectable
+  - Text
+  - fire
   layers:
   - Default
   - TransparentFX

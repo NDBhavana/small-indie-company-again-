@@ -3319,13 +3319,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5258562471216227767, guid: 3a2cf28b86eecfb44b3b8a5a58be3dff, type: 3}
+      propertyPath: fallscene
+      value: 9000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258562471216227767, guid: 3a2cf28b86eecfb44b3b8a5a58be3dff, type: 3}
       propertyPath: sceneindex
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5258562471216227767, guid: 3a2cf28b86eecfb44b3b8a5a58be3dff, type: 3}
       propertyPath: gameAnalytics
       value: 
       objectReference: {fileID: 150318606}
+    - target: {fileID: 5258562471216227767, guid: 3a2cf28b86eecfb44b3b8a5a58be3dff, type: 3}
+      propertyPath: currentsceneindex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8242635880828482013, guid: 3a2cf28b86eecfb44b3b8a5a58be3dff, type: 3}
       propertyPath: m_Name
       value: Passage 4

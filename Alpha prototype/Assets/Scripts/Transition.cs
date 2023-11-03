@@ -9,7 +9,7 @@ public class Transition : MonoBehaviour
 {
     public int sceneindex;
     public int currentsceneindex;
-    public int fallscene = 4;
+    public int fallscene = 90004;
     public GameAnalytics gameAnalytics;
     public DistanceAnalytics distanceAnalytics;
 
@@ -27,7 +27,7 @@ public class Transition : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("entered");
-        if (other.CompareTag("playerbody") && gameAnalytics != null)
+        if (other.CompareTag("Player") && gameAnalytics != null)
         {
             // Get the total distance for the current scene from the FirstPersonController
             totalDistanceForScene = FirstPersonController.GetTotalDistanceForCurrentScene();

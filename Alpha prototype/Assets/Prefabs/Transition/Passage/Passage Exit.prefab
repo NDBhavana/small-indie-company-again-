@@ -1394,6 +1394,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneindex: 2
+  currentsceneindex: 0
+  fallscene: 90004
+  gameAnalytics: {fileID: 0}
+  distanceAnalytics: {fileID: 0}
+  totalDistanceForScene: 0
 --- !u!54 &8154588045042594068
 Rigidbody:
   m_ObjectHideFlags: 0
