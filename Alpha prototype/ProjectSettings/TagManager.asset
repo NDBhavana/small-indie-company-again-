@@ -3,20 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-
   tags:
-  - ice
+  - Stop
   - playerbody
   - CinemachineTarget
+  - fire
+  - ice
+  - Start
   - Follow
   - Stay
-  - Spole
-  - Npole
-  - attract
-  - fire
-  - Start
-  - Stop
-
+  - Text
+  - Selectable
   layers:
   - Default
   - TransparentFX
