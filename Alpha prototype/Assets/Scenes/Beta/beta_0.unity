@@ -2269,13 +2269,17 @@ PrefabInstance:
       propertyPath: PauseMenu
       value: 
       objectReference: {fileID: 1083358721}
+    - target: {fileID: 6811744722452260065, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7461815187160215157, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
       propertyPath: m_Name
       value: UI(tutorial+pausemenu)
       objectReference: {fileID: 0}
     - target: {fileID: 8254226309886596388, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8290127778408022568, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
       propertyPath: m_LocalPosition.x
