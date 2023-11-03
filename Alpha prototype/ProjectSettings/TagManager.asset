@@ -4,20 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Stop
-  - playerbody
-  - CinemachineTarget
-  - fire
-  - ice
-  - Start
-  - Follow
-  - Stay
-  - Text
-  - Selectable
+  - attract
   - Spole
   - Npole
-  - attract
-  - Smagnet
+  - ice
+  - playerbody
+  - CinemachineTarget
+  - Stop
   layers:
   - Default
   - TransparentFX
