@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class keypress_levels : MonoBehaviour
+public class go_game : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,11 +13,13 @@ public class keypress_levels : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.H))
         {
-            //play level 1
-            Debug.Log("Level 1");
+            Debug.Log("Game");
         }
-
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.Log("Level");
+        }
     }
 }
