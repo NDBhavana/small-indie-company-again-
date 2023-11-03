@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class Starmanager : MonoBehaviour
 {
-    public static int star=0;
+    public int star=0;
     public int reqstar=5;
     // Start is called before the first frame update
     public GameObject door;
-    void OnTriggerEnter(Collider other)
-    {
-       
-    }
+    
 
     void Start()
     {
-        
+        star = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (star==reqstar)
+        if (star>=reqstar)
         {
              door.GetComponent<DoorOpening>().CallOpen();
         }
