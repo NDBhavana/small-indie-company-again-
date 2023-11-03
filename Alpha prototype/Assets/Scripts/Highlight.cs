@@ -22,7 +22,8 @@ public class OutlineSelection : MonoBehaviour
         if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out raycastHit)) //Make sure you have EventSystem in the hierarchy before using EventSystem
         {
             highlight = raycastHit.transform;
-            if (!highlight.CompareTag("Untagged") || highlight.CompareTag("Selectable") || highlight.CompareTag("ice") || highlight.CompareTag("fire") || highlight.CompareTag("Follow") || highlight.CompareTag("Stay") || highlight.CompareTag("Text") || highlight.CompareTag("Start")|| highlight.CompareTag("Stop") && highlight != selection)
+            //if (!highlight.CompareTag("Untagged") || highlight.CompareTag("Selectable") || highlight.CompareTag("ice") || highlight.CompareTag("fire") || highlight.CompareTag("Follow") || highlight.CompareTag("Stay") || highlight.CompareTag("Text") || highlight.CompareTag("Start")|| highlight.CompareTag("Stop") && highlight != selection)
+            if (!highlight.CompareTag("Untagged"))
             {
                 if (highlight.gameObject.GetComponent<Outline>() != null)
                 {
