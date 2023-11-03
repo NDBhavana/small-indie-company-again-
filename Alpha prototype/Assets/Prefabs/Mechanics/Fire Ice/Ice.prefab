@@ -133,9 +133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90572496d517382478f1b5ab8c94060a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireicemanager: {fileID: 0}
   fire: {fileID: 2100000, guid: 0c75b7d7ea8df88429d47e917f136d19, type: 2}
   ice: {fileID: 2100000, guid: b8e75e680949a2c40bbd4654733203fd, type: 2}
-  istrue: 0
+  istrue: 1
   inice: 0
   infire: 0
 --- !u!54 &6316125190722319718
