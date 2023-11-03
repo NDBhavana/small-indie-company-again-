@@ -13752,6 +13752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI(tutorial+pausemenu)
       objectReference: {fileID: 0}
+    - target: {fileID: 8254226309886596388, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8290127778408022568, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
       propertyPath: m_LocalPosition.x
       value: 317.8
