@@ -3,20 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-
   tags:
+  - attract
+  - Spole
+  - Npole
   - ice
   - playerbody
   - CinemachineTarget
-  - Follow
-  - Stay
-  - Spole
-  - Npole
-  - attract
-  - fire
-  - Start
   - Stop
-
   layers:
   - Default
   - TransparentFX

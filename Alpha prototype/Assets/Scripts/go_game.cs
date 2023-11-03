@@ -2,26 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Starmanager : MonoBehaviour
+public class go_game : MonoBehaviour
 {
-    public int star=0;
-    public int reqstar=5;
     // Start is called before the first frame update
-    public GameObject door;
-    
-
     void Start()
     {
-        star = 0;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (star>=reqstar)
+        if (Input.GetKeyDown(KeyCode.H))
         {
-             door.GetComponent<DoorOpening>().CallOpen();
+            Debug.Log("Game");
         }
-        
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.Log("Level");
+        }
     }
 }

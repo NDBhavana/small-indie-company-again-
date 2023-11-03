@@ -75,7 +75,8 @@ namespace StarterAssets
 		private float _rotationVelocity;
 		private float _verticalVelocity;
 		private float _terminalVelocity = 53.0f;
-
+		private Vector3 lastPosition;
+    	private static float totalDistanceForCurrentScene = 0.0f;
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
@@ -105,6 +106,9 @@ namespace StarterAssets
 
 		private void Awake()
 		{
+			// Initialize the lastPosition at the starting position
+            lastPosition = transform.position;
+
 			// get a reference to our main camera
 			if (_mainCamera == null)
 			{
@@ -236,8 +240,17 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			// Calculate the distance traveled in this frame and add it to the total distance for the current scene
+			Vector3 currentPosition = transform.position;
+			float frameDistance = Vector3.Distance(lastPosition, currentPosition);
+			totalDistanceForCurrentScene += frameDistance;
+			lastPosition = currentPosition;
 			
 		}
+		public static float GetTotalDistanceForCurrentScene()
+    	{
+        	return totalDistanceForCurrentScene;
+    	}
 
 		private void LateUpdate()
 		{

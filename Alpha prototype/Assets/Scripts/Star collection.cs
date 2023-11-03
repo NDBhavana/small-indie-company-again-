@@ -5,21 +5,30 @@ using UnityEngine;
 public class Starcollection : MonoBehaviour
 {
     public bool iscollect = false;
-   
+    public bool slime = false;
 
     private void Start()
     {
+        
        
+    }
+    private void Update()
+    {
+        if (slime)
+        {
+            this.gameObject.transform.parent.GetComponent<Starmanager>().star -= 1;
+            
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("work");
-        if (other.tag=="Player"||other.tag=="Follow"||other.tag=="Stay")
+        if (other.tag=="Player")
         {
             Debug.Log("entered player");
 
-            Starmanager.star+=1;
+            this.gameObject.transform.parent.GetComponent<Starmanager>().star += 1;
            // StarManager starManager = FindObjectOfType<StarManager>();
            //Starmanager.star+=1;
           
@@ -27,6 +36,14 @@ public class Starcollection : MonoBehaviour
             //delete obj
             Destroy(gameObject);
         }
+        else if(other.tag == "Follow" && !slime)
+        {
+            this.gameObject.transform.parent.GetComponent<Starmanager>().star += 1;
+            slime = true;
+            Destroy(gameObject);
+            //do notthing
+        }
+        
     }
 
 }
