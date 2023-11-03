@@ -14,6 +14,10 @@ TagManager:
   - Stay
   - Text
   - Selectable
+  - Spole
+  - Npole
+  - attract
+  - Smagnet
   layers:
   - Default
   - TransparentFX
