@@ -872,6 +872,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 166.05168
       objectReference: {fileID: 0}
+    - target: {fileID: 3208409468153244574, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 176
+      objectReference: {fileID: 0}
     - target: {fileID: 7461815187160215157, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
       propertyPath: m_Name
       value: UI(tutorial+pausemenu)
@@ -919,6 +923,14 @@ PrefabInstance:
     - target: {fileID: 8398394332356439327, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
       propertyPath: m_text
       value: Shoot one of the magnetic platforms  to change polarity
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398394332356439327, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
+      propertyPath: m_margin.x
+      value: -43.585266
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398394332356439327, guid: f76f34712fa2d3b4b9b40acc40eb1058, type: 3}
+      propertyPath: m_margin.z
+      value: -9.685669
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
