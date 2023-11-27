@@ -29,6 +29,10 @@ public class UImanager : MonoBehaviour
                 Pause();
             }
         }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            SceneManager.LoadScene(1);
+        }
         
        }
 
