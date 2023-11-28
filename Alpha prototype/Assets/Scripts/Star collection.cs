@@ -4,13 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Starcollection : MonoBehaviour
-{
-    public bool iscollect = false;
+{    public bool iscollect = false;
     public bool slime = false;
+    private string starName;
 
     private void Start()
-    {
-        
+    {  starName = this.gameObject.name;
+
+        if (PlayerPrefs.GetInt(starName) == 1){
+            Destroy(gameObject);
+        }
+
     }
 
     private void Update()
@@ -29,33 +33,24 @@ public class Starcollection : MonoBehaviour
             Debug.Log("entered player");
 
             this.gameObject.transform.parent.GetComponent<Starmanager>().star += 1;
+            starName = this.gameObject.name;
             
-            // Access StarAnalytics and send star data
-            StarAnalytics starAnalytics = FindObjectOfType<StarAnalytics>();
-            if (starAnalytics != null)
-            {
-                starAnalytics.SendStarData(this.gameObject.name);
-            }
+            Debug.Log("=================STAR NAME IS==============" + starName);
+            PlayerPrefs.SetInt(starName,1);
+            //star  star1 star2 star(1) // check if star in playerprefs if yes destroy the gameobject = star, else continue
 
-            Debug.Log("=================STAR NAME IS==============" + this.gameObject.name);
             Destroy(gameObject);
         }
         else if (other.tag == "Follow" && !slime)
         {
             this.gameObject.transform.parent.GetComponent<Starmanager>().star += 1;
             slime = true;
-
-            // Access StarAnalytics and send star data
-            StarAnalytics starAnalytics = FindObjectOfType<StarAnalytics>();
-            if (starAnalytics != null)
-            {
-                starAnalytics.SendStarData(this.gameObject.name);
-            }
-
-            Debug.Log("=================STAR NAME IS==============" + this.gameObject.name);
+            starName = this.gameObject.name;
             
-            Destroy(gameObject);
+            Debug.Log("=================STAR NAME IS==============" + starName);
+            PlayerPrefs.SetInt(starName,1);
 
+            Destroy(gameObject);
 
             // Do nothing
         }
