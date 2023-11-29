@@ -15,6 +15,7 @@ public class keypress_start : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.S)){
             //play level screen
+
             SceneManager.LoadScene(1);
         }
     }

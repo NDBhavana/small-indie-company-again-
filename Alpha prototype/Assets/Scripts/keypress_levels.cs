@@ -13,6 +13,8 @@ public class keypress_levels : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerPrefs.DeleteAll();
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             
