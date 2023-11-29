@@ -801,6 +801,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6119306595975440094, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0fd096544e9b5043b159d535d1c1d8a, type: 2}
     - target: {fileID: 8568061417783904494, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
       propertyPath: m_Name
       value: Ice (5)
@@ -1223,6 +1227,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6119306595975440094, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0fd096544e9b5043b159d535d1c1d8a, type: 2}
     - target: {fileID: 8568061417783904494, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
       propertyPath: m_Name
       value: Ice (7)
@@ -1300,6 +1308,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6119306595975440094, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0fd096544e9b5043b159d535d1c1d8a, type: 2}
     - target: {fileID: 8568061417783904494, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
       propertyPath: m_Name
       value: Ice (6)
@@ -1377,6 +1389,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6119306595975440094, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0fd096544e9b5043b159d535d1c1d8a, type: 2}
     - target: {fileID: 8568061417783904494, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
       propertyPath: m_Name
       value: Ice (4)
@@ -3848,6 +3864,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6119306595975440094, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0fd096544e9b5043b159d535d1c1d8a, type: 2}
     - target: {fileID: 8568061417783904494, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
       propertyPath: m_Name
       value: Ice (1)
@@ -4321,6 +4341,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6119306595975440094, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0fd096544e9b5043b159d535d1c1d8a, type: 2}
     - target: {fileID: 8568061417783904494, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
       propertyPath: m_Name
       value: Ice (3)
@@ -4716,6 +4740,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6119306595975440094, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0fd096544e9b5043b159d535d1c1d8a, type: 2}
     - target: {fileID: 8568061417783904494, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
       propertyPath: m_Name
       value: Ice (2)
@@ -4922,6 +4950,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6119306595975440094, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0fd096544e9b5043b159d535d1c1d8a, type: 2}
     - target: {fileID: 8568061417783904494, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
       propertyPath: m_Name
       value: Ice (8)
@@ -5957,6 +5989,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6119306595975440094, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0fd096544e9b5043b159d535d1c1d8a, type: 2}
     - target: {fileID: 8568061417783904494, guid: 5d0f6c6d3df436a41a2e9a79c7c57a2c, type: 3}
       propertyPath: m_Name
       value: Ice
