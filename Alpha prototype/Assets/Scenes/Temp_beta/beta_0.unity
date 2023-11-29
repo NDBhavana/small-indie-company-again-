@@ -2699,6 +2699,10 @@ PrefabInstance:
       propertyPath: m_margin.z
       value: 0.51691437
       objectReference: {fileID: 0}
+    - target: {fileID: 3237744886090613750, guid: 331b2cc27936be24c9a90c6a87b4d808, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b3f3cf57dd912f45a5af0973cf3f6d4, type: 2}
     - target: {fileID: 4014526790141262183, guid: 331b2cc27936be24c9a90c6a87b4d808, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -2770,7 +2774,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4494172236455579166, guid: 331b2cc27936be24c9a90c6a87b4d808, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 331b2cc27936be24c9a90c6a87b4d808, type: 3}
 --- !u!1001 &1959100881
 PrefabInstance:
