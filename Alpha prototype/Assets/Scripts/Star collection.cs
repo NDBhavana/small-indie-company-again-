@@ -34,6 +34,13 @@ public class Starcollection : MonoBehaviour
 
             this.gameObject.transform.parent.GetComponent<Starmanager>().star += 1;
             starName = this.gameObject.name;
+
+            // Access StarAnalytics and send star data
+            StarAnalytics starAnalytics = FindObjectOfType<StarAnalytics>();
+            if (starAnalytics != null)
+            {
+                starAnalytics.SendStarData(starName);
+            }
             
             Debug.Log("=================STAR NAME IS==============" + starName);
             PlayerPrefs.SetInt(starName,1);
@@ -46,6 +53,13 @@ public class Starcollection : MonoBehaviour
             this.gameObject.transform.parent.GetComponent<Starmanager>().star += 1;
             slime = true;
             starName = this.gameObject.name;
+
+            // Access StarAnalytics and send star data
+            StarAnalytics starAnalytics = FindObjectOfType<StarAnalytics>();
+            if (starAnalytics != null)
+            {
+                starAnalytics.SendStarData(starName);
+            }
             
             Debug.Log("=================STAR NAME IS==============" + starName);
             PlayerPrefs.SetInt(starName,1);
