@@ -10,10 +10,10 @@ public class FallDamageDetection : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(ToggleFallDamage)
         {
-            if(other.gameObject.tag == "playerbody"){
+            if(other.gameObject.tag == "playerbody" || other.gameObject.tag =="Player"){
                 //Debug.Log("My name is Malenia!");
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
         
