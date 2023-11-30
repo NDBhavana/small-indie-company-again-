@@ -5,92 +5,35 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Menu/Start.unity
-    guid: 41dea7bd7b0ab3e45817478b8be732d1
-  - enabled: 0
-    path: Assets/Scenes/Alpha/alpha_1.unity
-    guid: a0694af1149b1d84abc1493e3b757e42
-  - enabled: 0
-    path: Assets/Scenes/Alpha/alpha_2.unity
-    guid: d9a38eda0c26cad448cf436fd3fdb684
-  - enabled: 0
-    path: Assets/Scenes/Alpha/alpha_3.unity
-    guid: dab7b73fc41cb0a4cbd7e959a1997731
-  - enabled: 0
-    path: Assets/Scenes/Alpha/alpha_4.unity
-    guid: f2353078adc42674c9a66a37ac1c5e95
-  - enabled: 0
-    path: Assets/Scenes/Alpha/alpha_5.unity
-    guid: 93b3738bd17051741b67b45f3a05773b
-  - enabled: 0
-    path: Assets/Scenes/Anuradha/Anuradha's Scene.unity
-    guid: 106dd59527952cd4caf56488f5e43914
-  - enabled: 0
-    path: Assets/Scenes/Bhavana/Enemy2friend and fire2ice.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/Nandila/FireandIce_Level.unity
-    guid: dbf5da01a8b15d440b7351c476427d79
-  - enabled: 0
-    path: Assets/Scenes/Kavin/Kavin's Scene.unity
-    guid: 746e3367d8fd90d46bfc81ca7b7199e6
-  - enabled: 0
-    path: Assets/Scenes/Menu/Try again.unity
-    guid: 9e009e679d5f46644babde8d0b033f34
-  - enabled: 0
-    path: Assets/Scenes/Beta/beta_0.unity
-    guid: 4333b7cccd0fe74438d44ab27cbf769b
-  - enabled: 0
-    path: Assets/Scenes/Beta/beta_1.unity
-    guid: 1c7f59a7b2761724097750f272fc6f10
-  - enabled: 0
-    path: Assets/Scenes/Beta/beta_2.unity
-    guid: 2be6e9a0f4c935542b64c785b509607c
-  - enabled: 0
-    path: Assets/Scenes/Beta/beta_3.unity
-    guid: b675e3ad632f97843af59c77af994095
-  - enabled: 0
-    path: Assets/Scenes/Beta/beta_4.unity
-    guid: 538068b6e8bbc05499980104e8d3f87d
-  - enabled: 0
-    path: Assets/Scenes/Beta/beta_5.unity
-    guid: 76742db474478734ea39700475a58acf
-  - enabled: 0
-    path: Assets/Scenes/Menu/Won.unity
-    guid: 31f4df46895bed24bbcbc830a8336b43
   - enabled: 1
-    path: Assets/Scenes/Temp_beta/Start.unity
-    guid: cb52c3cec885fb548ba312c89b2a1fc3
+    path: Assets/Scenes/Gold/Start.unity
+    guid: 0a2d5714bccdf2840b03cdb4abe2e813
   - enabled: 1
-    path: Assets/Scenes/Temp_beta/Level Select.unity
-    guid: f08f797b679623b4fb5e165d3468f400
-  - enabled: 0
-    path: Assets/Scenes/Temp_beta/Help-brief.unity
-    guid: 34a5f4c4cc17b6d40b348767f76f5bf4
+    path: Assets/Scenes/Gold/Level Select.unity
+    guid: c41f14442c80d5e4c9d8d8862f5098f3
   - enabled: 1
-    path: Assets/Scenes/Temp_beta/beta_0.unity
-    guid: 1928650784822584191d14bdec36c52d
+    path: Assets/Scenes/Gold/beta_0.unity
+    guid: acd9bf599367e9848b1becbcfabb181a
   - enabled: 1
-    path: Assets/Scenes/Temp_beta/Fire tutorial.unity
-    guid: 16d7ef503cfc9a04ea41ea0a013c1dbc
+    path: Assets/Scenes/Gold/Fire tutorial.unity
+    guid: 9364ca94dc94c8e4680b9e5ab0ae8fbe
   - enabled: 1
-    path: Assets/Scenes/Temp_beta/easy level.unity
-    guid: 270fc7e6a00696843af963e08db5648f
+    path: Assets/Scenes/Gold/easy level.unity
+    guid: c7753fa5bc48b6944b26dd4a13fa3671
   - enabled: 1
-    path: Assets/Scenes/Temp_beta/slime tutorial.unity
-    guid: 3d628b0fcbfc0664088316bfb313a9db
+    path: Assets/Scenes/Gold/slime tutorial.unity
+    guid: 8fdc31d12abe18b41970100219e58063
   - enabled: 1
-    path: Assets/Scenes/Temp_beta/Magnet tutorial.unity
-    guid: 23aafd6c7cdd13141bef802e833462dc
+    path: Assets/Scenes/Gold/Magnet tutorial.unity
+    guid: 315832c421c592e438750120f5c3e3e6
   - enabled: 1
-    path: Assets/Scenes/Temp_beta/medium level.unity
-    guid: 9ea73f2a5b3590a48b151cf98b87ae16
+    path: Assets/Scenes/Gold/medium level.unity
+    guid: 2d212f9efc7758b40afef1f241efa6f7
   - enabled: 1
-    path: Assets/Scenes/Temp_beta/hard level.unity
-    guid: bc391a340007ebc42ba8dcaeca4a5754
+    path: Assets/Scenes/Gold/hard level.unity
+    guid: f7faa367cd4820745b6c2c8e3b26ccee
   - enabled: 1
-    path: Assets/Scenes/Temp_beta/Won.unity
-    guid: 5f2ce1065d02b1440bddca1f2d0d63f9
+    path: Assets/Scenes/Gold/Won.unity
+    guid: 59f5aa79c4fa8b3468dce9ad56d511b9
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
