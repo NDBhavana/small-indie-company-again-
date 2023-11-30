@@ -18,7 +18,7 @@ public class UImanager : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             if (GamePaused)
             {
