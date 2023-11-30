@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class keypress_start : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,7 +15,8 @@ public class keypress_start : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.S)){
             //play level screen
-            Debug.Log("Start");
+
+            SceneManager.LoadScene(1);
         }
     }
 }

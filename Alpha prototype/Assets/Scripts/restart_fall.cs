@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class restart_fall : MonoBehaviour
 { 
-    // Start is called before the first frame update
+  // Start is called before the first frame update
     void Start()
     {
       
@@ -17,12 +17,12 @@ public class restart_fall : MonoBehaviour
         
     }
     void OnTriggerEnter(Collider other)
-    {
+    {   
         if (other.tag == "playerbody" || other.tag == "Player")
         {
             
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            
         }
     }
+
 }

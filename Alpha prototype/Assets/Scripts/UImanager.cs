@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class UImanager : MonoBehaviour
 {
     public static bool GamePaused = false;
@@ -28,7 +29,12 @@ public class UImanager : MonoBehaviour
                 Pause();
             }
         }
-    }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            SceneManager.LoadScene(1);
+        }
+        
+       }
 
     
    public void Resume()
